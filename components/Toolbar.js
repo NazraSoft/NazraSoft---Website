@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
-import { FaHome ,FaBlog} from "react-icons/fa"
+import { FaHome } from "react-icons/fa"
 import { FcServices,FcAbout,FcBusinessContact } from "react-icons/fc"
 import {IoMdContact,IoMdLogIn} from "react-icons/io"
 import {SiAboutdotme} from 'react-icons/si'
 import Link from "next/link"
+import {TbWriting} from "react-icons/tb"
 
 const Toolbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -50,7 +51,7 @@ const Toolbar = () => {
           </Link>
           <Link href="/blog">
           <div className='mb-2'>
-            <FaBlog className='w-10 h-10 ml-1 text-red-400' />
+            <TbWriting className='w-10 h-10 ml-1 text-red-400' />
             <h3 className="text-md font-bold text-white">Blog</h3>
           </div>
           </Link>

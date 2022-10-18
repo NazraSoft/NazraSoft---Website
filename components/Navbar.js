@@ -1,6 +1,8 @@
 import {useTheme} from "next-themes";
 import {FaMoon,FaSun,FaSearch} from "react-icons/fa"
 import Toolbar from "./Toolbar"
+import {IoMdLogIn} from "react-icons/io"
+import Link from "next/link"
 
 const Navbar = () => {
     const {systemTheme , theme, setTheme} = useTheme ();
@@ -24,16 +26,16 @@ const Navbar = () => {
       <div>
         <header className="text-gray-600 body-font bg-green-400 md:mt-10 md:ml-20 md:mr-20 rounded-tl-xl rounded-br-xl shadow-md">
           <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row">
-            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
               {/* logo */}
               <span className="ml-3 text-xl">Art Life</span>
-            </a>
+            </Link>
             <nav className="hidden  md:mr-auto md:ml-4 md:py-1 md:pl-4	md:flex flex-wrap items-center text-base justify-center">
-              <a className="mr-5 hover:text-white text-black ">Home</a>
-              <a className="mr-5 hover:text-white text-black">About us</a>
-              <a className="mr-5 hover:text-white text-black ">Blog</a>
-              <a className="mr-5 hover:text-white text-black ">Services</a>
-              <a className="mr-5 hover:text-white text-black ">Contact</a>
+              <a href="/" className="mr-5 hover:text-white text-black ">Home</a>
+              <a href="/about" className="mr-5 hover:text-white text-black">About us</a>
+              <a href="/blog" className="mr-5 hover:text-white text-black ">Blog</a>
+              <a href="/services" className="mr-5 hover:text-white text-black ">Services</a>
+              <a href="/contact" className="mr-5 hover:text-white text-black ">Contact</a>
               {renderThemeChanger()}
             </nav>
             <div  className='hidden lg:block border-1 border-black rounded-lg shadow-md w-80 h-9 bg-black'>
@@ -42,12 +44,11 @@ const Navbar = () => {
                  <FaSearch className='mt-1 w-5 h-5' />
               </div>
             </div>
-           
-            <button className="hidden  ml-4 md:inline-flex items-center bg-cyan-300 border-0 py-1 px-3 focus:outline-none hover:bg-blue-400 rounded text-base mt-4 md:mt-0">Log In
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
+           <Link  href="/login">
+            <button href="/login" className="hidden  ml-4 md:inline-flex items-center bg-cyan-300 border-0 py-1 px-3 focus:outline-none hover:bg-blue-400 rounded text-base mt-4 md:mt-0">Log In
+              <IoMdLogIn className="w-4 h-4 ml-1" />
             </button>
+           </Link>
             <div className='md:hidden '>
   
             <Toolbar />
