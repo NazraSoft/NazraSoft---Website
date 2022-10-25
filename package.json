@@ -6,6 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@nhost/nextjs": "^1.8.1",
+    "@nhost/react": "^0.14.1",
+    "graphql": "^16.6.0",
     "next": "latest",
     "next-themes": "^0.2.1",
     "react": "18.1.0",

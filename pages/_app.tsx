@@ -2,16 +2,22 @@ import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from 'next/app'
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer"
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <ThemeProvider enableSystem={true} attribute="class">
+import { NhostNextProvider, NhostClient } from '@nhost/nextjs';
 
-<Navbar/>
+const nhost = new NhostClient({
+  subdomain: "ndtnhstryijibhjhvsct",
+  region: "ap-south-1"
+});
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return <NhostNextProvider nhost={nhost} initial={pageProps.nhostSession}>
+  <ThemeProvider enableSystem={true} attribute="class">
     <Component {...pageProps} />
 <Footer/>
   </ThemeProvider>
+  </NhostNextProvider>
 }
 
 export default MyApp

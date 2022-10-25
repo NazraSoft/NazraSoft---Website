@@ -25,12 +25,16 @@ const Navbar = () => {
   
       <div>
         <header className="text-gray-600 body-font bg-green-400 lg:mt-10 lg:ml-20 lg:mr-20 rounded-tl-xl rounded-br-xl shadow-md">
-          <div className="container mx-auto flex flex-wrap p-5 flex-row">
-            <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <div className='md:hidden '>
+  
+  <Toolbar />
+  </div>
+          <div className="container flex flex-wrap p-5 flex-row ">
+            <Link href="/" className="flex first-line:title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
               {/* logo */}
-              <img src="/logo.png" className="w-10 h-10"/>
+              <img src="/logo.png" className="hidden md:block w-10 h-10"/>
             </Link>
-              <span className="ml-3 text-xl">Art Life</span>
+              <span className="ml-12 text-3xl">Art Life</span>
             <nav className="hidden  md:mr-auto md:ml-4 md:py-1 md:pl-4	md:flex flex-wrap items-center text-base justify-center">
               <a href="/" className="mr-5 hover:text-white text-black ">Home</a>
               <a href="/about" className="mr-5 hover:text-white text-black">About us</a>
@@ -50,10 +54,6 @@ const Navbar = () => {
               <IoMdLogIn className="w-4 h-4 ml-1" />
             </button>
            </Link>
-            <div className='md:hidden '>
-  
-            <Toolbar />
-            </div>
           </div>
         </header>
       </div>
