@@ -4,9 +4,7 @@ import Navbar from "../components/Navbar"
 import { useUserData } from '@nhost/nextjs'
 
 const Home: NextPage = () => {
-  const user = useUserData()
-  console.log(user);
-  
+  const user = useUserData()  
   return (
     <>
     <Navbar />

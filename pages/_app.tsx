@@ -12,7 +12,7 @@ const nhost = new NhostClient({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <NhostNextProvider nhost={nhost} initial={pageProps.nhostSession}>
+  return <NhostNextProvider nhost={nhost}>
   <ThemeProvider enableSystem={true} attribute="class">
     <Component {...pageProps} />
 <Footer/>
