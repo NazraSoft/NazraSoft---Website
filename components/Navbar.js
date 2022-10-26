@@ -34,7 +34,7 @@ const Navbar = () => {
               {/* logo */}
               <img src="/logo.png" className="hidden md:block w-10 h-10"/>
             </Link>
-              <span className="ml-12 text-3xl">Art Life</span>
+              <span className="ml-12 text-3xl">NasraSoft </span>
             <nav className="hidden  md:mr-auto md:ml-4 md:py-1 md:pl-4	md:flex flex-wrap items-center text-base justify-center">
               <a href="/" className="mr-5 hover:text-white text-black ">Home</a>
               <a href="/about" className="mr-5 hover:text-white text-black">About us</a>
