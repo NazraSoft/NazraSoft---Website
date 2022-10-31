@@ -13,7 +13,7 @@ const Toolbar = () => {
     <>
       {showSidebar ? (
         <button
-          className="flex text-4xl text-white items-center cursor-pointer fixed right-10 bottom-6 z-50"
+          className="flex text-4xl text-white items-center cursor-pointer fixed right-14 bottom-6 z-50"
           onClick={() => setShowSidebar(!showSidebar)}
         >
           x
@@ -21,15 +21,15 @@ const Toolbar = () => {
       ) : (
         <svg
           onClick={() => setShowSidebar(!showSidebar)}
-          className="fixed  z-30 flex items-center cursor-pointer left-5 top-6"
+          className="fixed  z-30 flex items-center cursor-pointer left-5 top-7"
           fill="#2563EB"
           viewBox="0 0 100 80"
           width="40"
           height="40"
         >
-          <rect width="100" height="10"></rect>
-          <rect y="30" width="100" height="10"></rect>
-          <rect y="60" width="100" height="10"></rect>
+          <rect width="80" height="6"></rect>
+          <rect y="20" width="80" height="6"></rect>
+          <rect y="40" width="80" height="6"></rect>
         </svg>
       )}
 

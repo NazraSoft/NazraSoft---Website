@@ -4,44 +4,41 @@ const Footer = () => {
   return (
     <>
     <footer className="text-gray-600 body-font lg:mt-10 lg:ml-20 lg:mr-20">
-  <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+  <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-nowrap">
+    <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+      <a className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
       
-              <img src="/logo.png" className="w-10 h-10"/>
+              <img src="/logo.jpg" className="w-10 h-10"/>
              
-        <span className="ml-3 text-yellow-600 text-xl">Art Life</span>
+        <span className="ml-3 text-xl text-yellow-600">NazraSoft</span>
       </a>
-      <p className="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+      <p className="mt-2 text-sm text-gray-500">Your Need Our Passion</p>
     </div>
-    <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav className="list-none mb-10">
+    <div className="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+      <div className="w-full px-4 lg:w-1/4 md:w-1/2">
+        <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font">CATEGORIES</h2>
+        <nav className="mb-10 list-none">
           <li>
-            <Link href="/" className="text-gray-600 hover:text-yellow-800">Home</Link>
+            <Link href="/" className="text-gray-600 cursor-pointer hover:text-yellow-800">Home</Link>
           </li>
           <li>
-            <Link href="/about" className="text-gray-600 hover:text-yellow-800">About us</Link>
+            <Link href="/about" className="text-gray-600 cursor-pointer hover:text-yellow-800">About us</Link>
           </li>
           <li>
-            <Link href="/contact" className="text-gray-600 hover:text-yellow-800">Contact us</Link>
+            <Link href="/services" className="text-gray-600 cursor-pointer hover:text-yellow-800">Services</Link>
           </li>
           <li>
-            <Link href="/services" className="text-gray-600 hover:text-yellow-800">Services</Link>
-          </li>
-          <li>
-            <Link href="/blog" className="text-gray-600 hover:text-yellow-800">Blogs</Link>
+            <Link href="/plans" className="text-gray-600 cursor-pointer hover:text-yellow-800">Plans</Link>
           </li>
         </nav>
       </div>
       
     </div>
   </div>
-  <div className="bg-gray-900 text-yellow-500">
-  <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p className="text-gray-500 text-sm text-center sm:text-left">© 2022 ArtLife —
-        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+  <div className="text-yellow-500 ">
+  <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
+      <p className="text-sm text-center text-gray-500 sm:text-left">© 2022 NazraSoft —
+        <a href="https://www.linkedin.com/company/nazrasoft/" rel="noopener noreferrer" className="ml-1 text-gray-600" target="_blank">NazraSoft</a>
       </p>
       </div>
   </div>

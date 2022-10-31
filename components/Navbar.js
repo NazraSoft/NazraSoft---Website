@@ -34,7 +34,7 @@ const Navbar = () => {
               {/* logo */}
               <img src="/logo.png" className="hidden md:block w-10 h-10"/>
             </Link>
-              <span className="ml-12 text-3xl">NasraSoft </span>
+              <span className="ml-12 md:ml-2 text-3xl">NazraSoft </span>
             <nav className="hidden  md:mr-auto md:ml-4 md:py-1 md:pl-4	md:flex flex-wrap items-center text-base justify-center">
               <a href="/" className="mr-5 hover:text-white text-black ">Home</a>
               <a href="/about" className="mr-5 hover:text-white text-black">About us</a>
@@ -50,7 +50,7 @@ const Navbar = () => {
               </div>
             </div>
            <Link  href="/login">
-            <button href="/login" className="hidden  ml-4 md:inline-flex items-center bg-cyan-300 border-0 py-1 px-3 focus:outline-none hover:bg-blue-400 rounded text-base mt-4 md:mt-0">Log In
+            <button href="/login" className="hidden  ml-4 lg:inline-flex items-center bg-cyan-300 border-0 py-1 px-3 focus:outline-none hover:bg-blue-400 rounded text-base mt-4 md:mt-0">Log In
               <IoMdLogIn className="w-4 h-4 ml-1" />
             </button>
            </Link>

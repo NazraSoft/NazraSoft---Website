@@ -4,7 +4,7 @@ import {useNhostClient} from "@nhost/nextjs"
 const signup = () => {
   const nhost = useNhostClient()
   const handleonClick1 = () => {
-    nhost.auth.signUp({ provider: 'google' })
+    nhost.auth.signIn({ provider: 'google' })
   }
   const handleonClick2 = () => {
     nhost.auth.signIn({ provider: 'github' })
@@ -18,9 +18,9 @@ const signup = () => {
        
          </Link> */}
 
-         {/* <Link href="https://ndtnhstryijibhjhvsct.nhost.run/v1/auth/signin/provider/github" className="cursor-pointer">
+         <Link href="https://ndtnhstryijibhjhvsct.nhost.run/v1/auth/signin/provider/github" className="cursor-pointer">
             Google
-         </Link> */}
+         </Link>
 
          <div className='cursor-pointer ' onClick={handleonClick1}>Log in</div>
     </div>
