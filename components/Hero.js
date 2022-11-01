@@ -59,7 +59,7 @@ const Hero = () => {
     </div>
   </div>
   <div className="image-container md:w-1/2 md:mt-10 md:-mr-20">
-    
+  
   </div>
 </div>
     </>
