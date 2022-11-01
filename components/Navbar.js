@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from 'next/image'
 import {FaMoon,FaSun,FaSearch} from "react-icons/fa"
 import {useTheme} from "next-themes";
-import { useSession, signIn, signOut, newUSer } from "next-auth/react"
+import { useSession, signIn } from "next-auth/react"
 import {
   Drawer,
   DrawerBody,
@@ -70,8 +70,8 @@ const Navbar = () => {
   <nav className="flex flex-row items-center justify-between px-4 py-10 md:px-20">
     {/* <!-- Small little logo :) --> */}
     <div className="relative flex flex-row items-center space-x-1">
-      <div className="absolute w-6 transform r-2 2h-8 top-1 left-1"><Image width={16} height={16} src='/logo.jpg' layout="responsive" /></div>
-      <div><h1 className="pl-5 ml-3 text-2xl italic font-bold text-gray-700 dark:text-gray-50">NazraSoft</h1></div>
+      <div className="absolute w-6 transform r-2 2h-8 top-1 left-1"><Image width={40} height={40} src='/logo.jpg' layout="responsive" /></div>
+      <div><h1 className="pl-5 ml-3 text-2xl italic font-bold text-gray-700 dark:text-gray-50"><Link href="/">NazraSoft</Link></h1></div>
       <div>
       {renderThemeChanger()}              
             </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
     <div className="flex flex-row items-center space-x-8">
       <a href="/" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Home</a>
       <a href="/services" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Services</a>
-      <a href="/plans" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Plans</a>
+      <a href="/pricing" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Plans</a>
       <a href="/about" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">About us</a>
       <div className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:text-green-500 dark:text-gray-200">
         {/* Search BAR */}
@@ -95,7 +95,7 @@ const Navbar = () => {
         <p className="relative font-light text-gray-700 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">Login</p>
       </div>}
       {status === "authenticated" && <Link href="/account">
-      <img  src={session.user.image} className="relative w-12 h-12 rounded-full " />
+      <Link href="/account"><img  src={session.user.image} className="relative w-12 h-12 rounded-full " /></Link>
      </Link> }
     </div>
    

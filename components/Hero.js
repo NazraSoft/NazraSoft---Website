@@ -31,25 +31,31 @@ const Hero = () => {
       . Worry less about responsive and beautiful Design, focus more on growing your business faster.
     </h2>
 
-    <div className="flex mt-8 md:flex-row items-baseline space-x-4">
-      <div className="flex -space-x-2">
-        <img src="https://avatars.githubusercontent.com/u/75849689?v=4" className="W-16 h-16 rounded-full"/>
+    <div className="flex mt-6 md:flex-row items-baseline space-x-4">
+      <div className="flex space-x-2">
+        <img src="https://avatars.githubusercontent.com/u/75849689?v=4" className="W-16 h-16 rounded-full ml-2"/>
         <img src="https://avatars.githubusercontent.com/u/77575489?v=4" className="W-16 h-16 rounded-full"/>
         <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEwK5a7V2nJxA/profile-displayphoto-shrink_400_400/0/1651919754622?e=1672876800&v=beta&t=y1JBTedkW3nZN2HxUU6h_MZgAl0nCNLaf7KBumYEmXY" className="W-16 h-16 rounded-full"/>
         <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFVaPD9SwD5eA/profile-displayphoto-shrink_400_400/0/1664800458789?e=1672876800&v=beta&t=a4cD81e_kGFXgWHQqmFRkr1m01r2l7Vk_hmILnUY9lc" className="W-16 h-16 rounded-full"/>
-      <div>
-        <h3 className="text-gray-700 md:text-lg font-light dark:text-white ml-4 mt-4">
+      <div className='hidden md:block mt-4'>
+        <h3 className="text-gray-700 md:text-lg font-light dark:text-white ml-4 mt-1">
           Created by the founders of
           <a href="https://nazrasoft.vercel.app"> NazraSoft</a>
         </h3>
       </div>
         
       </div>
+      
     </div>
-
-    <div className="buttons-container flex space-x-2 md:space-x-4 text-white dark:text-white my-12">
-      <a href='/about' className="font-semibold rounded-md text-sm md:text-base bg-blue-500 px-4 py-2 md:px-8 md:py-4 cursor-pointer transform transition duration-200 hover:shadow-xl hover:-translate-y-1"> <span className="hidden lg:inline-block">Get</span> Quote </a>
-      <a href='/plans' className="font-semibold rounded-md text-sm md:text-base bg-red-500 px-4 py-2 md:px-8 md:py-4 cursor-pointer transform transition duration-200 hover:shadow-xl hover:-translate-y-1"> <span className="hidden lg:inline-block">View</span> Plans </a>
+<div className='md:hidden mt-6 '>
+        <h3 className="text-gray-700 md:text-lg font-light dark:text-white ml-4 mt-6">
+          Created by the founders of
+          <a href="https://nazrasoft.vercel.app"> NazraSoft</a>
+        </h3>
+      </div>
+    <div className="buttons-container items-center justify-center  flex space-x-2 md:space-x-4 text-white dark:text-white my-12">
+      <a href='/about' className="font-semibold rounded-md text-sm md:text-base bg-blue-500 px-8 py-3 mr-1 md:px-8 md:py-4 cursor-pointer transform transition duration-200 hover:shadow-xl hover:-translate-y-1"> <span className="hidden lg:inline-block">Get</span> Quote </a>
+      <a href='/pricing' className="font-semibold rounded-md text-sm md:text-base bg-red-500 px-8 py-3 ml-1  md:px-8 md:py-4 cursor-pointer transform transition duration-200 hover:shadow-xl hover:-translate-y-1"> <span className="hidden lg:inline-block">View</span> Pricing </a>
     </div>
   </div>
   <div className="image-container md:w-1/2 md:mt-10 md:-mr-20">

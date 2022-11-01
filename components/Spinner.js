@@ -17,7 +17,7 @@ const [state,setState] = useState(0)
      setTimeout(() => {
     
         setState(Math.floor(Math.random() * 5))
-          },[2000])
+          },[1000])
        return (
         <Container h="50vh" display="flex" alignItems="center" justifyContent="center">
         <ChakraBox
@@ -30,7 +30,7 @@ const [state,setState] = useState(0)
           transition={{
             duration: 3,
             ease: "easeInOut",
-            repeat: 10,
+            repeat: Infinity,
             repeatType: "loop",
           }}
           padding="2"

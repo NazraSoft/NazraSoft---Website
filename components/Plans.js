@@ -11,10 +11,10 @@ const Plans = () => {
     </div>
   </div>
   <div className="z-10 grid items-center content-center grid-cols-1 gap-8 py-20 mx-4 lg:grid-cols-3 md:mx-8 xl:mx-40">
-    <div className="relative z-10">
+    <div className="relative z-10 w-17/20 mx-8">
       <div className="relative z-10 flex flex-col p-4 mx-auto bg-white border border-gray-100 rounded-lg shadow-md card dark:bg-gray-700 dark:border-gray-700">
         <h2 className="my-4 text-xl font-bold text-center text-gray-800 dark:text-white">Webite Development</h2>
-        <p className="flex items-center justify-center my-4 mt-4 font-extrabold text-gray-800 price text-8xl dark:text-white"><span className="text-4xl">₹</span>12999</p>
+        <p className="flex items-center justify-center my-4 mt-4 font-extrabold text-gray-800 price text-4xl md:text-8xl dark:text-white"><span className="text-2xl md:text-4xl">₹</span>12999</p>
         <div className="features">
           <div className="flex flex-row items-start justify-start my-4 space-x-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className="w-4 h-4 mt-1 text-green-500">
@@ -57,10 +57,15 @@ const Plans = () => {
       </div>
       <div className="absolute inset-0 transform rounded-md -rotate-3 opacity-20 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></div>
     </div>
-    <div className="relative z-10">
+    <div className="relative z-10 w-17/20 mx-8">
+    <div className="flex justify-center mt-8">
+        <div className="absolute px-2 py-2 font-semibold bg-blue-300 rounded-md -top-4 dark:text-gray-100" style={{"z-index": 20}}>
+          <p>MOST POPULAR</p>
+        </div>
+      </div>
       <div className="relative z-10 flex flex-col p-4 mx-auto bg-white border-2 rounded-lg shadow-md card dark:bg-gray-700 border-tmk-blue dark:border-gray-700" style={{"z-index": 20}}>
         <h2 className="my-6 text-xl font-bold text-center text-gray-800 dark:text-white">Website + Application</h2>
-        <p className="flex items-center justify-center my-4 mt-4 font-extrabold text-gray-800 price text-8xl dark:text-white"><span className="text-4xl">₹</span>22999</p>
+        <p className="flex items-center justify-center my-4 mt-4 font-extrabold text-gray-800 price text-4xl md:text-8xl dark:text-white"><span className="text-2xl md:text-4xl">₹</span>22999</p>
         <div className="mx-auto features">
           <div className="flex flex-row items-start justify-start my-4 space-x-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className="w-4 h-4 mt-1 text-green-500">
@@ -115,16 +120,14 @@ const Plans = () => {
 
         <button className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
       </div>
-      <div className="flex justify-center">
-        <div className="absolute px-2 py-2 font-semibold bg-blue-300 rounded-md -top-12 dark:text-gray-100" style={{"z-index": 20}}>
-          <p>MOST POPULAR</p>
-        </div>
-      </div>
+     
     </div>
-    <div className="relative z-10">
+   
+    <div className="relative z-10 w-17/20 mx-8">
+    
       <div className="relative z-10 flex flex-col p-4 mx-auto bg-white border border-gray-100 rounded-lg shadow-md card dark:bg-gray-700 dark:border-gray-700">
         <h2 className="my-4 text-xl font-bold text-center text-gray-800 dark:text-white">Application Development</h2>
-        <p className="flex items-center justify-center my-4 mt-4 font-extrabold text-gray-800 price text-8xl dark:text-white"><span className="text-4xl">₹</span>14999</p>
+        <p className="flex items-center justify-center my-4 mt-4 font-extrabold text-gray-800 price text-4xl md:text-8xl dark:text-white"><span className="text-2xl md:text-4xl">₹</span>14999</p>
         <div className="features">
           <div className="flex flex-row items-start justify-start my-4 space-x-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className="w-4 h-4 mt-1 text-green-500">

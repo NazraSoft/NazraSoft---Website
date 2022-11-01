@@ -3,7 +3,7 @@ import Head from 'next/head'
 const plans = () => {
   return (
     <div><Head>
-    <title>Plans - NazraSoft</title>
+    <title>Pricing - NazraSoft</title>
     <meta name="description" content="Software Solutions" />
     <link rel="icon" href="/logo.jpg" />
 

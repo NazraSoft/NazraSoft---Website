@@ -9,7 +9,7 @@ const Landing = () => {
     <div>
         <header className="flex flex-col mx-4 ace-x-2 mgt-4 bpx-4 md:mt-20 md:flex-row md:px-20">
     {/* <!-- Text container --> */}
-    <div className="w-full md:w-1/2">
+    <div className="w-full md:w-1/2 mb-4 ">
       <h1 className="text-2xl font-bold text-gray-800 md:text-4xl lg:text-6xl dark:text-gray-50">Nazra Software Solution <span className="font-thin tracking-wider"> - Take your Business Online.</span></h1>
       <p className="max-w-xl my-10 font-light text-gray-800 dark:text-gray-200">Most Affordable Service Provider in the Region - Your Need Our Passion</p>
       {status == 'unauthenticated' && <div onClick={() => signIn()} className="inline-block py-2 bg-white border cursor-pointer p x-8 cursor-pointerrelative rounded-3xl hover:bg-gray-300">
@@ -19,9 +19,9 @@ const Landing = () => {
      <p   className="relative mx-4 font-light text-gray-700 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1 ">Get Started</p>
       </Link></div>}
     </div>
-
+ 
     {/* <!-- Image container --> */}
-    <div className="hidden w-full md:block md:w-1/2 perspective: 800px;">
+    <div className="mt:4 md:mt- w-full md:block md:w-1/2 perspective: 800px;">
       <div className="p-2 overflow-hidden transform bg-white shadow-2xl img-container rounded-xl transform: rotateX(40deg) rotateZ(6deg) rotateY(-10deg);">
         <img className="rounded-lg" src="https://res.cloudinary.com/tailwindmasterkit/image/upload/v1627290155/assets/untitled-design-47png-a821832209.png" alt="img-container" />
       </div>
@@ -29,12 +29,12 @@ const Landing = () => {
   </header>
   {/* <!-- Companies --> */}
   <section className="flex flex-col items-center justify-between px-20 py-10 mt-20 bg-gray-600 md:flex-row">
-    <h1 className="text-2xl font-bold text-gray-50">Companies who trust us</h1>
+    <h1 className="text-lg md:text-2xl font-bold text-gray-50">Companies who trust us</h1>
     <div className="flex flex-row flex-wrap items-center justify-center companies">
       <div className="mx-4 my-4">
-        <img src="/c1.jpg" className="h-24 w-28" alt="logo company" />
+        <img src="/c1.png" className="h-24 w-28" alt="logo company" />
       </div>
-      <div className="mx-4 my-4">
+      <div className="mx-10 my-4">
         <img src="https://www.pathshalagyan.com/logo1.jpg" className="h-24 w-28" alt="logo company" />
       </div>
       <div className="mx-4 my-4">

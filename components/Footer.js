@@ -10,7 +10,7 @@ const Footer = () => {
 
               <img src="/logo.jpg" className="w-10 h-10" />
 
-              <span className="ml-3 text-xl text-yellow-600">NazraSoft</span>
+              <span className="ml-3 text-xl text-yellow-600"><Link href="/">NazraSoft</Link></span>
             </a>
             <p className="mt-2 text-sm text-gray-500">Your Need Our Passion</p>
           </div>
@@ -34,13 +34,13 @@ const Footer = () => {
               <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font  dark:text-[#fbfbf9]">Services</h2>
               <nav className="mb-10 list-none">
                 <li>
-                  <p className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline"><Link href="/">Services</Link></p>
+                  <p className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline"><Link href="/services">Services</Link></p>
                 </li>
                 <li>
-                  <p className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline"><Link href="/about">Careers</Link></p>
+                  <p className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline"><Link href="/carrer">Careers</Link></p>
                 </li>
                 <li>
-                  <p className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline"><Link href="/services">Plans</Link></p>
+                  <p className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline"><Link href="/pricing">Pricing</Link></p>
                 </li>
               </nav>
             </div>
@@ -52,7 +52,7 @@ const Footer = () => {
               <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font dark:text-[#fbfbf9]">Privacy</h2>
               <nav className="mb-10 list-none">
                 <li>
-                  <p className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline"><Link href="/">Privacy policy</Link></p>
+                  <p className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline"><Link href="/privacy">Privacy policy</Link></p>
                 </li>
                 
               </nav>
