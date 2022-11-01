@@ -13,8 +13,8 @@ import Navbar from "../components/Navbar";
 //   region: "ap-south-1"
 // });
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
-  return  <SessionProvider session={session}>
+function MyApp({ Component, pageProps: {  ...pageProps } }: AppProps) {
+  return  <SessionProvider>
   <ThemeProvider enableSystem={true} attribute="class">
     <Navbar/>
     <Component {...pageProps} />
