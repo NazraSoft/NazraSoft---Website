@@ -59,7 +59,7 @@ const Hero = () => {
     </div>
   </div>
   <div className="image-container md:w-1/2 md:mt-10 md:-mr-20">
-  
+  <img className='h-3/4 w-[90%] rounded-lg bg-black' src='/hero.gif'/>
   </div>
 </div>
     </>
