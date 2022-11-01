@@ -4,7 +4,6 @@ import { useSession, signIn, signOut, newUser } from "next-auth/react"
 const account = () => {
   const [state ,setState] = useState([])
   const { data: session ,status} = useSession()
-  console.table(session.user)
   return (
     <div><Head>
     <title> - NazraSoft</title>
