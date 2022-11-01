@@ -1,9 +1,14 @@
 import React from 'react'
-import Navbar from "../components/Navbar"
+import Head from 'next/head'
 const about = () => {
   return (
     <div>
-      <Navbar/>
+      <Head>
+    <title>About us - NazraSoft</title>
+    <meta name="description" content="Software Solutions" />
+    <link rel="icon" href="/logo.jpg" />
+
+  </Head>
       about</div>
   )
 }

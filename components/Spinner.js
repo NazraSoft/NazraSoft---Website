@@ -17,9 +17,9 @@ const [state,setState] = useState(0)
      setTimeout(() => {
     
         setState(Math.floor(Math.random() * 5))
-          },[5000])
+          },[2000])
        return (
-        <Container h="100vh" display="flex" alignItems="center" justifyContent="center">
+        <Container h="50vh" display="flex" alignItems="center" justifyContent="center">
         <ChakraBox
          animate={{
             scale: [1, 2, 2, 1, 1],

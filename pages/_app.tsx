@@ -3,21 +3,24 @@ import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from 'next/app'
 import Footer from "../components/Footer"
+import { SessionProvider } from "next-auth/react"
+import Navbar from "../components/Navbar";
 
-import { NhostNextProvider, NhostClient } from '@nhost/nextjs';
+// import { NhostNextProvider, NhostClient } from '@nhost/nextjs';
 
-const nhost = new NhostClient({
-  subdomain: "ndtnhstryijibhjhvsct",
-  region: "ap-south-1"
-});
+// const nhost = new NhostClient({
+//   subdomain: "ndtnhstryijibhjhvsct",
+//   region: "ap-south-1"
+// });
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <NhostNextProvider nhost={nhost}>
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+  return  <SessionProvider session={session}>
   <ThemeProvider enableSystem={true} attribute="class">
+    <Navbar/>
     <Component {...pageProps} />
 <Footer/>
   </ThemeProvider>
-  </NhostNextProvider>
+  </SessionProvider>
 }
 
 export default MyApp

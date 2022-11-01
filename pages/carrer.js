@@ -1,17 +1,16 @@
 import React from 'react'
 import Head from 'next/head'
-const services = () => {
+const carrer = () => {
   return (
     <div>
-      <Head>
-    <title>Services - NazraSoft</title>
+        <Head>
+    <title>Carrer - NazraSoft</title>
     <meta name="description" content="Software Solutions" />
     <link rel="icon" href="/logo.jpg" />
 
   </Head>
-      
-      services</div>
+    </div>
   )
 }
 
-export default services
+export default carrer

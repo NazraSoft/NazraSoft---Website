@@ -1,17 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
-const services = () => {
+const plans = () => {
   return (
-    <div>
-      <Head>
-    <title>Services - NazraSoft</title>
+    <div><Head>
+    <title>Plans - NazraSoft</title>
     <meta name="description" content="Software Solutions" />
     <link rel="icon" href="/logo.jpg" />
 
-  </Head>
-      
-      services</div>
+  </Head></div>
   )
 }
 
-export default services
+export default plans

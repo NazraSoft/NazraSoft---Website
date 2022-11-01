@@ -1,22 +1,25 @@
 import type { NextPage } from 'next'
-import Hero from "../components/Hero"
-import Navbar from "../components/Navbar"
-import { useUserData } from '@nhost/nextjs'
 import Spinner from "../components/Spinner"
-import {useEffect} from "react"
 import Landing from "../components/Landing"
 import Plans from "../components/Plans"
 import Faq from "../components/Faq"
-const Home: NextPage = () => {
-  const user = useUserData();
-    
-  return (
-    <>
+import Head from "next/head"
+
+const Home: NextPage = () => {    
+  return ( 
+  <div>
+
+        <Head>
+        <title>Home - NazraSoft</title>
+        <meta name="description" content="Software Solutions" />
+        <link rel="icon" href="/logo.jpg" />
+
+      </Head>
     <Landing />
     <Plans />  
     <Faq/> 
     <Spinner props="NazraSoft" />
-    </>
+    </div>
   )
 }
 

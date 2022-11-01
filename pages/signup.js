@@ -1,28 +1,15 @@
 import Link from 'next/link'
-import {useNhostClient} from "@nhost/nextjs"
-
+import Head from 'next/head'
 const signup = () => {
-  const nhost = useNhostClient()
-  const handleonClick1 = () => {
-    nhost.auth.signIn({ provider: 'google' })
-  }
-  const handleonClick2 = () => {
-    nhost.auth.signIn({ provider: 'github' })
-  }
+ 
    return (
-    <div className="">
-      
-          {/* <Link href="https://ndtnhstryijibhjhvsct.nhost.run/v1/auth/signin/provider/google" className="cursor-pointer">
-               Create account
-             
-       
-         </Link> */}
+    <div>
+      <Head>
+    <title>Sign up - NazraSoft</title>
+    <meta name="description" content="Software Solutions" />
+    <link rel="icon" href="/logo.jpg" />
 
-         <Link href="https://ndtnhstryijibhjhvsct.nhost.run/v1/auth/signin/provider/github" className="cursor-pointer">
-            Google
-         </Link>
-
-         <div className='cursor-pointer ' onClick={handleonClick1}>Log in</div>
+  </Head>
     </div>
   )
 }
