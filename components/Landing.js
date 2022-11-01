@@ -53,7 +53,7 @@ const Landing = () => {
 
 
             </div> */}
-            <img className='h-3/4' src="/landing.gif" />
+            <img className='ml-6 h-3/4' src="/landing.gif" />
           </div>
         </div>
       </header>
