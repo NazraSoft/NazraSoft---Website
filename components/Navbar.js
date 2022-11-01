@@ -44,41 +44,33 @@ const Navbar = () => {
       
     <main className="relative antialiased bg-white dark:bg-[#25292A] z-0 overflow-hidden">
     
-
+{/* 
 <Drawer colorScheme={'purple'} placement="left" onClose={onClose} isOpen={isOpen}>
   <DrawerOverlay />
   <DrawerContent>
 {/* <Box className='bg-gradient-to-br from-[#9796f0] to-[#fbc7d4]'> */}
-  <DrawerCloseButton />
+  {/* <DrawerCloseButton />
     <DrawerHeader borderBottomWidth='1px'>
       <div className="flex flex-row">
         <Image src={'/logo1.jpg'} width={50} height={50} />
         <span className="mt-3 ml-3 text-2xl">Gyan Pathshala</span>
-        </div></DrawerHeader>
+        </div></DrawerHeader> */}
   {/* </Box> */}
-    <DrawerBody>
+    {/* <DrawerBody> */}
         {/* <div className="flex flex-row mt-6 mb-4 text-xl "><MdHome size={28} className="mr-2"/><Link href="/">Home</Link></div>
         <div className="flex flex-row mt-6 mb-4 text-xl"><MdLibraryBooks size={28} className="mr-2" /><Link href="/courses">Courses</Link></div>
         <div className="flex flex-row mt-6 mb-4 text-xl"><AiOutlineTeam size={28} className="mr-2" /><Link href="/ourmanagement">Our Management</Link></div>
         <div className="flex flex-row mt-6 mb-4 text-xl"><IoIosContact size={28} className="mr-2"/><Link href="https://docs.google.com/forms/d/e/1FAIpQLSfiRya38A8aPeEUWYyCpdLH5rs9LWDzHe-J1xfsZubowfpBCA/viewform?usp=sf_link">Contact us</Link> </div> */}
-    </DrawerBody>
+    {/* </DrawerBody>
   </DrawerContent>
-</Drawer>
+</Drawer> */} 
   {/* <!-- Blobs --> */}
   <div className="absolute hidden text-gray-100 md:block -left-40 -top-40 dark:text-gray-600" style={{"z-index": -40}}>
   </div>
   <nav className="flex flex-row items-center justify-between px-4 py-10 md:px-20">
     {/* <!-- Small little logo :) --> */}
     <div className="relative flex flex-row items-center space-x-1">
-    <Box
-          display='flex' 
-          alignItems='center'
-          ml={6}
-          mr={6}
-        >
-          <HamburgerIcon className='cursor-pointer' h={10} w={8} ref={btnRef} colorScheme='teal' onClick={onOpen} />
-       </Box>
-      <div className="absolute hidden w-6 transform md:block r-2 2h-8 top-1 left-1"><Image width={16} height={16} src='/logo.jpg' layout="responsive" /></div>
+      <div className="absolute w-6 transform r-2 2h-8 top-1 left-1"><Image width={16} height={16} src='/logo.jpg' layout="responsive" /></div>
       <div><h1 className="pl-5 ml-3 text-2xl italic font-bold text-gray-700 dark:text-gray-50">NazraSoft</h1></div>
       <div>
       {renderThemeChanger()}              
