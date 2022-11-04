@@ -4,21 +4,8 @@ import Image from 'next/image'
 import {FaMoon,FaSun,FaSearch} from "react-icons/fa"
 import {useTheme} from "next-themes";
 import { useSession, signIn } from "next-auth/react"
-import {
-  Drawer,
-  DrawerBody,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  useDisclosure,
-} from '@chakra-ui/react'
-import {Box} from '@chakra-ui/react'
-import { HamburgerIcon } from '@chakra-ui/icons'
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = React.useRef()
   const { data: session ,status} = useSession()
   
     const {systemTheme , theme, setTheme} = useTheme ();
@@ -26,55 +13,34 @@ const Navbar = () => {
   
       const currentTheme = theme === "system" ? systemTheme : theme ;
   
-      if(currentTheme ==="dark"){
+      if(currentTheme === "dark"){
         return (
-          <FaSun className="w-10 h-6 text-yellow-600 border-l-2 border-red-600 " role="button" onClick={() => setTheme('light')} />
+          <div>
+
+            <FaSun className="w-10 h-6 text-yellow-600 border-l-2 border-red-600 " role="button" onClick={() => setTheme('light')} />
+          </div>
         )
       }
       else {
         return (
-          <FaMoon className="w-10 h-6 text-gray-900 border-l-2 border-red-600 " role="button" onClick={() => setTheme('dark')} />
+          <div>
+            <FaMoon className="w-10 h-6 text-gray-900 border-l-2 border-red-600 " role="button" onClick={() => setTheme('dark')} />
+            </div>
         )
       }
    };
   return (
     <div>
-
-      
-      
-    <main className="relative antialiased bg-white dark:bg-[#25292A] z-0 overflow-hidden">
-    
-{/* 
-<Drawer colorScheme={'purple'} placement="left" onClose={onClose} isOpen={isOpen}>
-  <DrawerOverlay />
-  <DrawerContent>
-{/* <Box className='bg-gradient-to-br from-[#9796f0] to-[#fbc7d4]'> */}
-  {/* <DrawerCloseButton />
-    <DrawerHeader borderBottomWidth='1px'>
-      <div className="flex flex-row">
-        <Image src={'/logo1.jpg'} width={50} height={50} />
-        <span className="mt-3 ml-3 text-2xl">Gyan Pathshala</span>
-        </div></DrawerHeader> */}
-  {/* </Box> */}
-    {/* <DrawerBody> */}
-        {/* <div className="flex flex-row mt-6 mb-4 text-xl "><MdHome size={28} className="mr-2"/><Link href="/">Home</Link></div>
-        <div className="flex flex-row mt-6 mb-4 text-xl"><MdLibraryBooks size={28} className="mr-2" /><Link href="/courses">Courses</Link></div>
-        <div className="flex flex-row mt-6 mb-4 text-xl"><AiOutlineTeam size={28} className="mr-2" /><Link href="/ourmanagement">Our Management</Link></div>
-        <div className="flex flex-row mt-6 mb-4 text-xl"><IoIosContact size={28} className="mr-2"/><Link href="https://docs.google.com/forms/d/e/1FAIpQLSfiRya38A8aPeEUWYyCpdLH5rs9LWDzHe-J1xfsZubowfpBCA/viewform?usp=sf_link">Contact us</Link> </div> */}
-    {/* </DrawerBody>
-  </DrawerContent>
-</Drawer> */} 
-  {/* <!-- Blobs --> */}
-  <div className="absolute hidden text-gray-100 md:block -left-40 -top-40 dark:text-gray-600" style={{"z-index": -40}}>
+ <main className="relative antialiased bg-white dark:bg-[#25292A] z-0 overflow-hidden">
+  <div className="absolute hidden text-gray-100 md:block -left-40 -top-40 dark:text-gray-600" style={{"zIndex": -40}}>
   </div>
   <nav className="flex flex-row items-center justify-between px-4 py-10 md:px-20">
     {/* <!-- Small little logo :) --> */}
     <div className="relative flex flex-row items-center space-x-1">
       <div className="absolute w-6 transform r-2 2h-8 top-1 left-1"><Image width={40} height={40} src='/logo.jpg' layout="responsive" /></div>
-      <div><h1 className="pl-5 ml-3 text-2xl italic font-bold text-gray-700 dark:text-gray-50"><Link href="/">NazraSoft</Link></h1></div>
-      <div>
-      {renderThemeChanger()}              
-            </div>
+      <div><h1 className="pl-5 ml-3 text-2xl italic font-bold text-gray-700 dark:text-gray-50"><Link href="/">NazraSoft</Link></h1></div>           
+      
+    {renderThemeChanger()} 
     </div>
     <div className="flex flex-row items-center space-x-8">
       <a href="/" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Home</a>
