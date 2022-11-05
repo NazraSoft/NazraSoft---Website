@@ -10,7 +10,7 @@ function signin({ providers }) {
     return (
       <>
       <Head>
-    <title>Sign In - NazraSoft</title>
+    <title>Sign In - NazraSoft Solutions</title>
     <meta name="description" content="Software Solutions" />
     <link rel="icon" href="/logo.jpg" />
 
