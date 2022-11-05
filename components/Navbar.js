@@ -4,8 +4,10 @@ import Image from 'next/image'
 import {FaMoon,FaSun,FaSearch} from "react-icons/fa"
 import {useTheme} from "next-themes";
 import { useSession, signIn } from "next-auth/react"
+import {Button} from "@chakra-ui/react"
 
 const Navbar = () => {
+
   const { data: session ,status} = useSession()
   
     const {systemTheme , theme, setTheme} = useTheme ();
@@ -31,13 +33,14 @@ const Navbar = () => {
    };
   return (
     <div>
+      
  <main className="relative antialiased bg-white dark:bg-[#25292A] z-0 overflow-hidden">
   <div className="absolute hidden text-gray-100 md:block -left-40 -top-40 dark:text-gray-600" style={{"zIndex": -40}}>
   </div>
   <nav className="flex flex-row items-center justify-between px-4 py-10 md:px-20">
     {/* <!-- Small little logo :) --> */}
-    <div className="relative flex flex-row items-center space-x-1">
-      <div className="absolute w-6 transform r-2 2h-8 top-1 left-1"><Image width={40} height={40} src='/logo.jpg' layout="responsive" /></div>
+    <div className="relative flex flex-row items-center space-x-1">    
+      <div className="hidden md:block absolute w-6 transform r-2 2h-8 top-1 left-1"><Image width={40} height={40} src='/logo.jpg' layout="responsive" /></div>
       <div><h1 className="pl-5 ml-3 text-2xl italic font-bold text-gray-700 dark:text-gray-50"><Link href="/">NazraSoft</Link></h1></div>           
       
     {renderThemeChanger()} 
@@ -57,20 +60,25 @@ const Navbar = () => {
             </div> 
       </div>
       {status === "unauthenticated" && 
-      <div onClick={() => signIn()} className="relative px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300">
-        <p className="relative font-light text-gray-700 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">Login</p>
+      <div onClick={() => signIn()} className="relative px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">
+        <p className="relative font-light text-gray-700 ">Login</p>
       </div>}
       {status === "authenticated" && <Link href="/account">
       <Link href="/account"><img  src={session.user.image} className="relative w-12 h-12 rounded-full " /></Link>
      </Link> }
     </div>
-   
+   <div>
+        
+
+
+      </div>
     
   </nav>
 
   
   
 </main>
+
     </div>
   )
 }
