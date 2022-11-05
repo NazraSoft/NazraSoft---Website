@@ -1,5 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+
 const plans = () => {
   return (
     <div><Head>
@@ -7,7 +10,9 @@ const plans = () => {
     <meta name="description" content="Software Solutions" />
     <link rel="icon" href="/logo.jpg" />
 
-  </Head></div>
+  </Head>
+  <Navbar/>
+  <Footer/></div>
   )
 }
 

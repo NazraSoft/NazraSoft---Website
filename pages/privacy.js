@@ -1,5 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const privacy = () => {
   return (
@@ -10,6 +12,7 @@ const privacy = () => {
     <link rel="icon" href="/logo.jpg" />
 
   </Head>
+  <Navbar/>
     <div className='flex flex-col p-12 border-2 border-gray-400 r md:mx-64'>
 <h2 className="mt-6 mb-6 text-3xl font-bold text-center underline" >Privacy Policy</h2>
 <p className="text-lg italic"><li className="mx-12 mt-2 mb-2 ">At Nazrasoft.vercel.app, accessible from https://nazrasoft.vercel.app/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Nazrasoft.vercel.app and how we use it.</li></p>
@@ -96,6 +99,7 @@ const privacy = () => {
 
 
     </div>
+    <Footer/>
     </div>
   )
 }

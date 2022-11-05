@@ -1,5 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+
 const services = () => {
   return (
     <div>
@@ -10,7 +13,8 @@ const services = () => {
 
   </Head>
       
-      services</div>
+  <Navbar/>
+      <Footer/></div>
   )
 }
 

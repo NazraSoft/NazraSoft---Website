@@ -1,5 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+
 const about = () => {
   return (
     <div>
@@ -9,7 +12,8 @@ const about = () => {
     <link rel="icon" href="/logo.jpg" />
 
   </Head>
-      about</div>
+  <Navbar/>
+      <Footer/></div>
   )
 }
 

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { useSession, signIn, signOut, newUser } from "next-auth/react"
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+
 const account = () => {
   const [state ,setState] = useState([])
   const { data: session ,status} = useSession()
@@ -11,7 +14,8 @@ const account = () => {
     <link rel="icon" href="/logo.jpg" />
 
   </Head>
-  
+  <Navbar/>
+  <Footer/>
   
   </div>
   )
