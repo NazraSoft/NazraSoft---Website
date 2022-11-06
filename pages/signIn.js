@@ -60,7 +60,7 @@ function signin({ providers }) {
         </div>
         
       </div>
-      <img src="/Vectors.png" className="w-full h-[111px] top-[66px] lg:top-[116px] md:top-[435px]  relative "/>
+      <img src="/Vectors.png" className="w-full h-[111px] fixed bottom-0 hidden md:block"/>
       </>
     );
   }
