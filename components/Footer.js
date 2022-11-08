@@ -22,6 +22,12 @@ const Footer = () => {
                 <li>
                   <a href="/about" className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline">About-us</a>
                 </li>
+                <li>
+                  <a href="/team" className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline">Our Team</a>
+                </li>
+                <li>
+                  <a href="/contact" className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline">Contact</a>
+                </li>
               </nav>
             </div>
           </div>
@@ -55,6 +61,16 @@ const Footer = () => {
                 
               </nav>
             </div>
+
+            <div className="w-full px-4 lg:w-1/2 md:w-1/2">
+              <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font dark:text-[#fbfbf9]">Terms and Condition</h2>
+              <nav className="mb-10 list-none">
+                <li>
+                  <a href="/terms" className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline">Terms & Condition</a>
+                </li>
+                
+              </nav>
+            </div>
           </div>
 
 
@@ -63,7 +79,7 @@ const Footer = () => {
         <div className="text-yellow-500 ">
           <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
             <p className="text-sm text-center text-gray-500 sm:text-left">© 2022 NazraSoft —
-              <a href="https://www.aedin.com/company/nazrasoft/" rel="noopener noreferrer" className="ml-1 text-gray-600" target="_blank">NazraSoft</a>
+              <a href="https://twitter.com/NazraSoft" rel="noopener noreferrer" className="ml-1 text-gray-600" target="_blank">NazraSoft</a>
             </p>
           </div>
         </div>

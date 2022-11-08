@@ -1,22 +1,21 @@
 'use client'
-
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useRouter } from 'next/router'
-import { Spinner } from '@chakra-ui/react'
+import  Spinner  from '../components/Spinner'
 
 const account = () => {
   const [state ,setState] = useState([])
   const { data: session ,status} = useSession()
+  
+  const router = useRouter();
 
-const router = useRouter();
-
-// useEffect(() => {
-//   status == 'unauthenticated' ? router.push('/signIn') : ""
-// })
+  useEffect(() => {
+    status == 'unauthenticated' ? router.push('/signIn') : ""
+  })
   return (
     <div><Head>
     <title>Account - NazraSoft</title>
@@ -25,15 +24,14 @@ const router = useRouter();
 
   </Head>
   <Navbar/>
-    {status == 'loading' ? <Spinner /> : (
+    {status == 'authenticated' ? 
       <div>
         {session.user.email}
         {session.user.name}
         {session.user.image}
-        {status == 'authenticated' ? <button onClick={() => signOut()}>Sign Out</button> : <button onClick={() => signIn()}>Sign In</button>}
-      </div>
-    )}
-
+        <button onClick={() => signOut()}>Sign Out</button> 
+        </div> : ""
+    }
   <Footer/>
   
   </div>

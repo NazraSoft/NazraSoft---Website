@@ -6,7 +6,11 @@ import Faq from "../components/Faq"
 import Head from "next/head"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useSession, signIn, signOut } from "next-auth/react"
+
 const Home: NextPage = () => {    
+  const { data: session ,status} = useSession()
+  
   return ( 
   <div>
 
@@ -17,11 +21,15 @@ const Home: NextPage = () => {
 
       </Head>
       <Navbar/>
+
+      {status == 'loading' ? <Spinner props="NazraSoft" /> : (
+        <>
+        
     <Landing />
     <Plans />  
     <Faq/> 
-    <Spinner props="NazraSoft" />
     <Footer/>
+    </>)}
     </div>
   )
 }

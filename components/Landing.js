@@ -1,17 +1,38 @@
-import React from 'react'
 import Hero from './Hero'
-import Link from 'next/link'
-import { useSession, signIn, signOut, newUSer } from "next-auth/react"
+import React from 'react'
+import Link from "next/link"
+import Image from 'next/image'
+import {FaMoon,FaSun,FaSearch} from "react-icons/fa"
+import {useTheme} from "next-themes";
+import { useSession, signIn } from "next-auth/react"
+import {Button} from "@chakra-ui/react"
+
 
 const Landing = () => {
 
-  // function imageFromJsonObject(file){
-  //   for (var i = 0; i < file.length; i += 1) {
-  //     var fruit = getRandomItem(fruitsArray);
-  //     file[i].innerHTML = fruit.name + '<img src="'+fruit.image+'">';
-  //   }
-  // }
-  const { data: session, status } = useSession()
+  const { data: session ,status} = useSession()
+  
+    const {systemTheme , theme, setTheme} = useTheme ();
+    const renderThemeChanger= () => {
+  
+      const currentTheme = theme === "system" ? systemTheme : theme ;
+  
+      if(currentTheme === "dark"){
+        return (
+          <div>
+
+            <FaSun className="w-10 h-6 text-yellow-600 border-l-2 border-red-600 " role="button" onClick={() => setTheme('light')} />
+          </div>
+        )
+      }
+      else {
+        return (
+          <div>
+            <FaMoon className="w-10 h-6 text-gray-900 border-l-2 border-red-600 " role="button" onClick={() => setTheme('dark')} />
+            </div>
+        )
+      }
+   };
   return (
     <div>
       
