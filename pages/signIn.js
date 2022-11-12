@@ -43,7 +43,7 @@ function signin({ providers }) {
 
           <div>
             <button>
-              <Link href="/api/auth/login">
+              <Link href="/api/auth0/login">
               <img  src="/sign.png" className="transition duration-200 hover:-translate-y-1 mt-10 h-16"/>
               </Link>
             </button>
