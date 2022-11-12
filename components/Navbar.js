@@ -3,19 +3,10 @@ import Link from "next/link"
 import {FaMoon,FaSun,FaSearch} from "react-icons/fa"
 import {useTheme} from "next-themes";
 import { useSession, signIn, signOut } from "next-auth/react"
-import { useUser } from '@auth0/nextjs-auth0';
-import Spinner from './Spinner';
-import {useRouter} from 'next/router';
 
 const Navbar = () => {
-  const router = useRouter()
-  const { user:users } = useUser();
-  
-  const { data: session ,status} = useSession()
 
-  const handleClick = () => {
-    router.push("/api/auth/logout");
-  }
+  const { data: session ,status} = useSession()
   
     const {systemTheme , theme, setTheme} = useTheme ();
     const renderThemeChanger= () => {
@@ -72,12 +63,7 @@ const Navbar = () => {
       {status === "authenticated" && <div className='flex flex-1 flex-row space-x-2 justify-between'>
       <Link href="/account"><img  src={session.user.image} className="relative cursor-pointer w-12 h-12 rounded-full " /></Link>
       <button className='hidden md:block relative px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">
-        <p className="relative font-light text-gray-700 ' onClick={() => {
-          if (users) {
-            handleClick()
-          }
-          else signOut()
-        }}>Sign Out</button>
+        <p className="relative font-light text-gray-700 ' onClick={() => signOut()}>Sign Out</button>
       </div>}
     </div>
    <div>

@@ -1,7 +1,7 @@
 import { getProviders, signIn, getSession, getCsrfToken } from "next-auth/react";
 import AuthButton from "../components/AuthButton";
 import Head from 'next/head'
-import Link from 'next/link'
+
 
 function signin({ providers }) {
   
@@ -19,12 +19,12 @@ function signin({ providers }) {
       <div className=" text-center flex-1 flex-col flex lg:mx-[462px] md:mx-32 mx-2 h-full my-8 lg:mt-[74px] md:mt-[214px]">
          <div className="items-center justify-center">
 
-         {/* <img src='/login.png' className="h-32 w-[100%]" alt="..."/> */}
+         {/* <img src='/login.png' className="h-32 w-[100%]" alt="..."/>  */}
          <div className="text-6xl mt-4 mb-4 ">Sign In</div>
          
          <div className="text-md">Sign in and start easy access to all the pages</div>
 
-         {/* <div className="mx-4 h-8 mb-6 p-1">
+          <div className="mx-4 h-8 mb-6 p-1">
          <input className="bg-[#030e4a] md:w-[50%] w-[70%] h-8 my-4 p-2 rounded-lg text-white border-blue-600 " type="text" placeholder="Login"></input>
           </div>
           <div className="mx-4 h-8 mb-6 p-1">
@@ -39,13 +39,13 @@ function signin({ providers }) {
           <div className="h-8 mb-2 mt-2 mx-3 md:relative lg:left-[190px] md:left-[150px]">
               Forgot Password?
           </div>
-          </div> */}
+          </div>
 
           <div>
             <button>
-              <Link href="/api/auth0/login">
+              
               <img  src="/sign.png" className="transition duration-200 hover:-translate-y-1 mt-10 h-16"/>
-              </Link>
+              
             </button>
           </div>
 <div className="flex flex-row items-center justify-center mt-4">

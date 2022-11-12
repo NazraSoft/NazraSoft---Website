@@ -1,37 +1,15 @@
 import Hero from './Hero'
 import React from 'react'
 import Link from "next/link"
-import { useUser } from '@auth0/nextjs-auth0';
 import {FaMoon,FaSun,FaSearch} from "react-icons/fa"
 import {useTheme} from "next-themes";
 import { useSession, signIn } from "next-auth/react"
 
 
 const Landing = () => {
-  const { user, error, isLoading } = useUser();
+  
   const { data: session ,status} = useSession()
   
-    const {systemTheme , theme, setTheme} = useTheme ();
-    const renderThemeChanger= () => {
-  
-      const currentTheme = theme === "system" ? systemTheme : theme ;
-  
-      if(currentTheme === "dark"){
-        return (
-          <div>
-
-            <FaSun className="w-10 h-6 text-yellow-600 border-l-2 border-red-600 " role="button" onClick={() => setTheme('light')} />
-          </div>
-        )
-      }
-      else {
-        return (
-          <div>
-            <FaMoon className="w-10 h-6 text-gray-900 border-l-2 border-red-600 " role="button" onClick={() => setTheme('dark')} />
-            </div>
-        )
-      }
-   };
   return (
     <div>
       
@@ -40,10 +18,10 @@ const Landing = () => {
         <div className="w-full md:w-1/2 mb-4 ">
           <h1 className="text-2xl font-bold text-gray-800 md:text-4xl lg:text-6xl dark:text-gray-50">Nazra Software Solution <span className="font-thin tracking-wider"> - Take your Business Online.</span></h1>
           <p className="max-w-xl my-10 font-light text-gray-800 dark:text-gray-200">Most Affordable Service Provider in the Region - Your Need Our Passion</p>
-          {(status == 'unauthenticated' || !user) && <div onClick={() => signIn()} className="transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1  inline-block py-2 bg-white border-2 cursor-pointer p x-8  relative rounded-3xl hover:bg-gray-300">
+          {(status == 'unauthenticated' ) && <div onClick={() => signIn()} className="transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1  inline-block py-2 bg-white border-2 cursor-pointer p x-8  relative rounded-3xl hover:bg-gray-300">
             <p className="relative mx-4 font-light text-gray-700 ">Create Account</p>
           </div>}
-          {(status === "authenticated" || user) &&  <div className="inline-block py-2 bg-white border cursor-pointer p x-8 cursor-pointerrelative rounded-3xl hover:bg-gray-300"><Link href="/services" >
+          {(status === "authenticated") &&  <div className="inline-block py-2 bg-white border cursor-pointer p x-8 cursor-pointerrelative rounded-3xl hover:bg-gray-300"><Link href="/services" >
             <p className="relative mx-4 font-light text-gray-700 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1 ">Get Started</p>
           </Link></div>}
         </div>

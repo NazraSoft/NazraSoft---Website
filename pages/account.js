@@ -5,20 +5,14 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useRouter } from 'next/router'
-import  Spinner  from '../components/Spinner'
-import { useUser } from '@auth0/nextjs-auth0';
-import Link from 'next/link'
 
 const account = () => {
   const [state ,setState] = useState([])
   const { data: session ,status} = useSession()
-  const { user:users, error, isLoading } = useUser();
-  if (isLoading) return <Spinner props="Loading"/>;
-  if (error) return <Spinner props={error.message}/>;
   const router = useRouter();
 
   useEffect(() => {
-    (status == 'unauthenticated' || !users) ? router.push('/signIn') : ""
+    (status == 'unauthenticated') ? router.push('/signIn') : ""
   })
   return (
     <div><Head>
@@ -29,20 +23,24 @@ const account = () => {
   </Head>
   <Navbar/>
     {status == 'authenticated' &&
-      <div>
-        {session.user.email}
-        {session.user.name}
-        {session.user.image}
-        <button onClick={() => signOut()}>Sign Out</button> 
+      <div className='flex flex-col items-center justify-between mt-12 '>
+        <div className='flex flex-row '>
+        <img src={session.user.image} className="w-32 h-32 rounded-full shadow-md" />
+      
+        </div>
+        <div className='flex flex-row mt-8'>
+        <h1>Name - </h1>  {session.user.name}
+
+        </div>
+        <div className='flex flex-row mt-8'>
+        <h1>Email -</h1> {" " + session.user.email}
+
+        </div>
+       
+          <button className='w-32 h-12 mt-8 rounded-full border-1 p-1 border-red-500 bg-gray-300 text-black hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1' onClick={() => signOut()}>Sign Out</button> 
         </div>
     }
-    {users &&
-      <div>
-        {users.email}
-        {users.name}
-        <img src={users.picture} alt={users.name} />
-        <Link href="/api/auth0/logout" >Sign Out</Link> 
-        </div>}
+    
   <Footer/>
   
   </div>
