@@ -1,9 +1,10 @@
 import { getProviders, signIn, getSession, getCsrfToken } from "next-auth/react";
 import AuthButton from "../components/AuthButton";
 import Head from 'next/head'
+import Link from 'next/link'
 
 function signin({ providers }) {
-
+  
   const handleOnClick = (provider) => {
     signIn(provider.id)
   }
@@ -23,7 +24,7 @@ function signin({ providers }) {
          
          <div className="text-md">Sign in and start easy access to all the pages</div>
 
-         <div className="mx-4 h-8 mb-6 p-1">
+         {/* <div className="mx-4 h-8 mb-6 p-1">
          <input className="bg-[#030e4a] md:w-[50%] w-[70%] h-8 my-4 p-2 rounded-lg text-white border-blue-600 " type="text" placeholder="Login"></input>
           </div>
           <div className="mx-4 h-8 mb-6 p-1">
@@ -38,11 +39,13 @@ function signin({ providers }) {
           <div className="h-8 mb-2 mt-2 mx-3 md:relative lg:left-[190px] md:left-[150px]">
               Forgot Password?
           </div>
-          </div>
+          </div> */}
 
           <div>
             <button>
-              <img src="/sign.png" className="transition duration-200 hover:-translate-y-1"/>
+              <Link href="/api/auth/login">
+              <img  src="/sign.png" className="transition duration-200 hover:-translate-y-1 mt-10 h-16"/>
+              </Link>
             </button>
           </div>
 <div className="flex flex-row items-center justify-center mt-4">
