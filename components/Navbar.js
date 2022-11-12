@@ -9,7 +9,7 @@ import {useRouter} from 'next/router';
 
 const Navbar = () => {
   const router = useRouter()
-  const { user:users, error, isLoading } = useUser();
+  const { user:users } = useUser();
   
   const { data: session ,status} = useSession()
 
