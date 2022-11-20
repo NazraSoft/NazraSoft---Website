@@ -42,10 +42,8 @@ function signin({ providers }) {
           </div>
 
           <div>
-            <button>
-              
-              <img  src="/sign.png" className="transition duration-200 hover:-translate-y-1 mt-10 h-16"/>
-              
+            <button className="transition text-black rounded-full text-center duration-200 hover:-translate-y-1 mt-6 h-12 md:w-64 w-32 bg-green-400">           
+              Login
             </button>
           </div>
 <div className="flex flex-row items-center justify-center mt-4">

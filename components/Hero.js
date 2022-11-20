@@ -36,7 +36,7 @@ const Hero = () => {
         <img src="https://avatars.githubusercontent.com/u/75849689?v=4" className="W-16 h-16 rounded-full ml-2"/>
         <img src="https://avatars.githubusercontent.com/u/77575489?v=4" className="W-16 h-16 rounded-full"/>
         <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEwK5a7V2nJxA/profile-displayphoto-shrink_400_400/0/1651919754622?e=1672876800&v=beta&t=y1JBTedkW3nZN2HxUU6h_MZgAl0nCNLaf7KBumYEmXY" className="W-16 h-16 rounded-full"/>
-        <img src="https://media-exp1.licdn.com/dms/image/D4E03AQFVaPD9SwD5eA/profile-displayphoto-shrink_400_400/0/1664800458789?e=1672876800&v=beta&t=a4cD81e_kGFXgWHQqmFRkr1m01r2l7Vk_hmILnUY9lc" className="W-16 h-16 rounded-full"/>
+        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGJ6bfiUFMFOg/profile-displayphoto-shrink_400_400/0/1667936904182?e=1674691200&v=beta&t=SRHnGM1NffTjtVbGvJRX_iKU5wAybA7WItk0BalwnxU" className="W-16 h-16 rounded-full"/>
       <div className='hidden md:block mt-4'>
         <h3 className="text-gray-700 md:text-lg font-light dark:text-white ml-4 mt-1">
           Created by the founders of

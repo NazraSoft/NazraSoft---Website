@@ -47,9 +47,9 @@ const Navbar = () => {
       <a href="/services" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Services</a>
       <a href="/pricing" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Plans</a>
       <a href="/about" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">About us</a>
-      <div className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:text-green-500 dark:text-gray-200">
+      <div className=" justify-between hidden font-semibold text-gray-500 transition duration-100 md:block hover:text-green-500 dark:text-gray-200">
         {/* Search BAR */}
-        <div  className='hidden bg-black border-black rounded-full shadow-md dark:bg-white lg:block border-1 w-80 h-9 '>
+        <div  className='justify-between hidden bg-black border-black rounded-full shadow-md dark:bg-white lg:block border-1 w-80 h-9 '>
               <div className= 'flex flex-row  focus:border-blue-700 w-[97%] h-[80%] border-1 mx-1 pt-1'>
                  <input className='dark:bg-white flex w-[93%] h-[96%] border-1 bg-black mx-1 p-2' type="search" name="search" placeholder='Search Here' />
                  <FaSearch className='w-5 h-5 mt-1 dark:text-black' />
@@ -62,9 +62,11 @@ const Navbar = () => {
       </div>}
       {status === "authenticated" && <div className='flex flex-1 flex-row space-x-2 justify-between'>
       <Link href="/account"><img  src={session.user.image} className="relative cursor-pointer w-12 h-12 rounded-full " /></Link>
-      <button className='hidden md:block relative px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">
-        <p className="relative font-light text-gray-700 ' onClick={() => signOut()}>Sign Out</button>
+      <button className="hidden md:block relative px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">
+      <p className="relative font-light text-gray-700" onClick={() => signOut()}>Sign Out</p>  </button>
       </div>}
+      <button  className="hidden md:block relative px-8 py-2 bg-[#da2525] border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-[#df6d6d] transition duration-100 transform text-white dark:text-white">
+      <Link href="/" className="relative font-light text-gray-700">Get in Touch</Link>  </button>
     </div>
    <div>
         

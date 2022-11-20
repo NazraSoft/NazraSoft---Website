@@ -13,6 +13,7 @@ const carrer = () => {
 
   </Head>
   <Navbar/>
+  
   <Footer/>
     </div>
   )
