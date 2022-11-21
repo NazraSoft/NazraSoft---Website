@@ -71,9 +71,9 @@ const team = () => {
                                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/gray-bg-with-description-svg1.svg" alt="github" />
                                                 </div>
                                             </Link>
-                                            <a href={item.linkedin} className="mx-5">
+                                            <a href={item.linkedin} className="ml-5">
                                                 <div aria-label="Twitter" role="img">
-                                                    <img src="https://tse2.mm.bing.net/th?id=OIP.458_lNnmOvMb2f3LNi-G8wHaHv&pid=Api&P=0" className='h-6 w-8' alt="linkedin" />
+                                                    <img src="https://tse2.mm.bing.net/th?id=OIP.458_lNnmOvMb2f3LNi-G8wHaHv&pid=Api&P=0" className='h-6 w-6' alt="linkedin" />
                                                 </div>
                                             </a>
                                             <a href={item.insta} className="mx-5">

@@ -7,6 +7,8 @@ import Head from "next/head"
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { useSession, signIn, signOut } from "next-auth/react"
+import TeamBanner from "../components/TeamBanner"
+import NewsLetter from "../components/NewsLetter"
 
 const Home: NextPage = () => {    
   const { data: session ,status} = useSession()
@@ -26,8 +28,10 @@ const Home: NextPage = () => {
         <>
         
     <Landing />
+    <TeamBanner />
     <Plans />  
     <Faq/> 
+    <NewsLetter/>
     <Footer/>
     </>)}
     </div>

@@ -44,7 +44,7 @@ const Navbar = () => {
     </div>
     <div className="flex flex-row items-center space-x-8">
       <a href="/" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Home</a>
-      <a href="/services" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Services</a>
+      <a href="/team" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Our Team</a>
       <a href="/pricing" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">Plans</a>
       <a href="/about" className="hidden font-semibold text-gray-500 transition duration-100 md:block hover:underline dark:text-gray-200">About us</a>
       <div className=" justify-between hidden font-semibold text-gray-500 transition duration-100 md:block hover:text-green-500 dark:text-gray-200">
@@ -65,7 +65,7 @@ const Navbar = () => {
       <button className="hidden md:block relative px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">
       <p className="relative font-light text-gray-700" onClick={() => signOut()}>Sign Out</p>  </button>
       </div>}
-      <button  className="hidden md:block relative px-8 py-2 bg-[#da2525] border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-[#df6d6d] transition duration-100 transform text-white dark:text-white">
+      <button  className="hidden md:block relative px-8 py-2 bg-[#da2525] border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-[#e06464] transition duration-100 transform text-white dark:text-white">
       <Link href="/" className="relative font-light text-gray-700">Get in Touch</Link>  </button>
     </div>
    <div>
