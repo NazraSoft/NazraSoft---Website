@@ -66,7 +66,7 @@ const Navbar = () => {
       <p className="relative font-light text-gray-700" onClick={() => signOut()}>Sign Out</p>  </button>
       </div>}
       <button  className="hidden md:block relative px-8 py-2 bg-[#da2525] border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-[#e06464] transition duration-100 transform text-white dark:text-white">
-      <Link href="/" className="relative font-light text-gray-700">Get in Touch</Link>  </button>
+      <Link href="/contact" className="relative font-light text-gray-700">Get in Touch</Link>  </button>
     </div>
    <div>
         
