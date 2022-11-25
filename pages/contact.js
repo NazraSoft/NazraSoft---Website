@@ -22,6 +22,9 @@ const contact = () => {
     const {error} = await supabase
     .from('query')
     .insert({  name: name,email: email, phone: phone, message: message })
+    .then(() => alert("Form Submitted"))
+    
+    
   // } else {
   //   const {error} = await supabase
   // .from('query')
@@ -30,8 +33,6 @@ const contact = () => {
 
   
   // }
-    if(error == null) alert("Form Submitted")
-    else alert("Form Not Submitted")
       
   }
   return (
