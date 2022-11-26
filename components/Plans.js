@@ -13,7 +13,7 @@ const Plans = () => {
   <div className="z-10 grid items-center content-center grid-cols-1 gap-8 py-20 mx-4 lg:grid-cols-3 md:mx-8 xl:mx-40">
     <div className="relative z-10 w-17/20 mx-8">
       <div className="relative z-10 flex flex-col p-4 mx-auto bg-white border border-gray-100 rounded-lg shadow-md card dark:bg-gray-700 dark:border-gray-700">
-        <h2 className="my-4 text-xl font-bold text-center text-gray-800 dark:text-white">Webite Development</h2>
+        <h2 className="my-4 text-xl font-bold text-center text-gray-800 dark:text-white">Website Development</h2>
         <p className="flex items-center justify-center my-4 mt-4 font-extrabold text-gray-800 price text-4xl md:text-8xl dark:text-white"><span className="text-2xl md:text-4xl">₹</span>12999</p>
         <div className="features">
           <div className="flex flex-row items-start justify-start my-4 space-x-2">

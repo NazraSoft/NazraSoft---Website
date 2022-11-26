@@ -4,12 +4,10 @@ import supabase from "../client"
 function NewsLetter() {
 
     const [state, setState] = useState("");
-    const handleCheck = async() => {
-        await supabase.from('Email').select().eq('email', state).then(() => {return true}).catch(() => {return false})
-    }
+    
     const handleClick = async() => {
-        if(handleCheck) alert("Already Subscribed")
-        else await supabase.from('Email').insert({  email: state }).then(() => alert("NewsLetter Subscribed")).catch(() =>alert("NewsLetter Not Subscribed") )
+        
+        await supabase.from('Email').insert({  email: state }).then(() => alert("NewsLetter Subscribed")).catch(() =>alert("Something might happen not good!") )
         
     }
     return (
@@ -25,9 +23,9 @@ function NewsLetter() {
                                     <label className="text-base font-bold text-gray-800 dark:text-white mb-2" htmlFor="email">
                                         Email
                                     </label>
-                                    <input onChange={(e) => setState(e.target.value)} type="email" id="email" placeholder="johnstark97@gmail.com" className="focus:outline-none focus:border-indigo-700 border-gray-300 border rounded-sm py-2 outline-none pl-2 pr-2 text-center" />
+                                    <input onChange={(e) => setState(e.target.value)} type="email" id="email" placeholder="johnstark97@gmail.com" className="focus:outline-none focus:border-indigo-700 border-gray-300 border rounded-sm py-2 outline-none pl-2 pr-2 text-center w-2/3" />
                                 </div>
-                                <button onClick={handleClick} type="submit" className="focus:outline-none bg-indigo-700 hover:bg-indigo-600 text-white text-base  py-3 px-6 rounded items-center">
+                                <button onClick={handleClick} type="submit" className="focus:outline-none bg-indigo-700 hover:bg-indigo-600 text-white text-base   py-3 px-6 rounded items-center">
                                     Subscribe to Newsletter
                                 </button>
                             </div>
