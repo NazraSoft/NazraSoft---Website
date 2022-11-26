@@ -4,6 +4,7 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from 'next/app'
 import { SessionProvider } from "next-auth/react"
 import { UserProvider } from '@auth0/nextjs-auth0';
+import {GetButton} from '../components/GetButton'
 
 
 // import { NhostNextProvider, NhostClient } from '@nhost/nextjs';
@@ -21,7 +22,7 @@ function MyApp({ Component, pageProps: {  ...pageProps } }: AppProps) {
   <ThemeProvider enableSystem={true} attribute="class">
   
     <Component {...pageProps} />
-
+    <GetButton />
   </ThemeProvider>
      </UserProvider>
   </SessionProvider>

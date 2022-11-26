@@ -9,7 +9,6 @@ import Footer from '../components/Footer'
 import { useSession, signIn, signOut } from "next-auth/react"
 import TeamBanner from "../components/TeamBanner"
 import NewsLetter from "../components/NewsLetter"
-import {GetButton} from '../components/GetButton'
 
 const Home: NextPage = () => {    
   const { data: session ,status} = useSession()
@@ -27,7 +26,7 @@ const Home: NextPage = () => {
 
       {status == 'loading' ? <Spinner props="NazraSoft" /> : (
         <>
-    <GetButton />
+    
         
     <Landing />
     <TeamBanner />
