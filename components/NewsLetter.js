@@ -1,5 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
+import supabase from "../client"
+
 function NewsLetter() {
+
+    const [state, setState] = useState("");
+    const handleCheck = async() => {
+        await supabase.from('Email').select().eq('email', state).then(() => {return true}).catch(() => {return false})
+    }
+    const handleClick = async() => {
+        if(handleCheck) alert("Already Subscribed")
+        else await supabase.from('Email').insert({  email: state }).then(() => alert("NewsLetter Subscribed")).catch(() =>alert("NewsLetter Not Subscribed") )
+        
+    }
     return (
         <div className="xl:flex xl:justify-end pt-16">
             <div className="container sm:mx-auto">
@@ -9,13 +21,13 @@ function NewsLetter() {
                         <p className="text-lg text-gray-600 mb-6">Sign Up for our weekly newsletter to get the latest news updates and amazing offers delivered directly in your inbox.</p>
                         <div className="flex w-full flex-wrap text-center">
                             <div className="w-full">
-                                <div className="flex flex-col mb-3">
+                                <div className="flex flex-col mb-3 items-center">
                                     <label className="text-base font-bold text-gray-800 dark:text-white mb-2" htmlFor="email">
                                         Email
                                     </label>
-                                    <input type="email" id="email" placeholder="johnstark97@gmail.com" className="focus:outline-none focus:border-indigo-700 border-gray-300 border rounded-sm py-2 outline-none pl-2 pr-2" />
+                                    <input onChange={(e) => setState(e.target.value)} type="email" id="email" placeholder="johnstark97@gmail.com" className="focus:outline-none focus:border-indigo-700 border-gray-300 border rounded-sm py-2 outline-none pl-2 pr-2 text-center" />
                                 </div>
-                                <button type="submit" className="focus:outline-none bg-indigo-700 hover:bg-indigo-600 text-white text-base w-full py-3 px-6 rounded">
+                                <button onClick={handleClick} type="submit" className="focus:outline-none bg-indigo-700 hover:bg-indigo-600 text-white text-base  py-3 px-6 rounded items-center">
                                     Subscribe to Newsletter
                                 </button>
                             </div>

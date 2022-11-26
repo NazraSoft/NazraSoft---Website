@@ -58,11 +58,14 @@ const Footer = () => {
                 <li>
                   <a href="/privacy" className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline">Privacy policy</a>
                 </li>
+                <li>
+                  <a href="/terms" className="text-black cursor-pointer dark:text-gray-600 hover:text-yellow-800 hover:underline">Terms & Condition</a>
+                </li>
                 
               </nav>
             </div>
 
-            <div className="w-full px-4 lg:w-1/2 md:w-1/2">
+            {/* <div className="w-full px-4 lg:w-1/2 md:w-1/2">
               <h2 className="mb-3 text-sm font-medium tracking-widest text-gray-900 title-font dark:text-[#fbfbf9]">Terms and Condition</h2>
               <nav className="mb-10 list-none">
                 <li>
@@ -71,11 +74,13 @@ const Footer = () => {
                 
               </nav>
             </div>
-          </div>
+          </div> */}
 
 
 
         </div>
+        
+          </div>
         <div className="text-yellow-500 ">
           <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
             <p className="text-sm text-center text-gray-500 sm:text-left">© 2022 NazraSoft —
