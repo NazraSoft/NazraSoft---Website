@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import {useLayoutEffect} from "react";
 import Spinner from "../components/Spinner"
 import Landing from "../components/Landing"
 import Plans from "../components/Plans"
@@ -9,11 +10,14 @@ import Footer from '../components/Footer'
 import { useSession, signIn, signOut } from "next-auth/react"
 import TeamBanner from "../components/TeamBanner"
 import NewsLetter from "../components/NewsLetter"
+import axios from "axios"
+import { useState } from 'react';
 
 const Home: NextPage = () => {    
   const { data: session ,status} = useSession()
+
   
-  return ( 
+      return ( 
   <div>
 
         <Head>

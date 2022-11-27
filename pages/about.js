@@ -28,8 +28,8 @@ const about = () => {
                         </p>
                     </div>
                     <div className="w-full lg:w-6/12">
-                        <img className="w-full" src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="people discussing on board" />
-                     </div>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Vo9KArdbQRg?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                         </div>
                 </div>
 {/* 
                 <div className="relative mt-24">
@@ -103,8 +103,8 @@ const about = () => {
                         </p>
                     </div>
                     <div className="w-full lg:w-6/12">
-                    {/* <img className="w-full" src="https://lottiefiles.com/81450-team" alt="people discussing on board" />
-                     */}
+                    <img className="w-full" src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="people discussing on board" />
+                    
                     </div>
 
                     {/* <div className="w-full lg:w-6/12">

@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from 'next/app'
 import { SessionProvider } from "next-auth/react"
 import { UserProvider } from '@auth0/nextjs-auth0';
-import {GetButton} from '../components/GetButton'
+import { GetButton } from '../components/GetButton'
 
 
 // import { NhostNextProvider, NhostClient } from '@nhost/nextjs';
@@ -14,17 +14,20 @@ import {GetButton} from '../components/GetButton'
 //   region: "ap-south-1"
 // });
 
-function MyApp({ Component, pageProps: {  ...pageProps } }: AppProps) {
-  
-  return  <SessionProvider>
-     <UserProvider>
 
-  <ThemeProvider enableSystem={true} attribute="class">
+
+function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
+
+  return   <SessionProvider>
+    <UserProvider>
+      <ThemeProvider enableSystem={true} attribute="class">
+      
+        <Component {...pageProps} />
+        <GetButton />
   
-    <Component {...pageProps} />
-    <GetButton />
-  </ThemeProvider>
-     </UserProvider>
+      </ThemeProvider>
+    </UserProvider>
+      
   </SessionProvider>
 }
 
