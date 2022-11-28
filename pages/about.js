@@ -28,7 +28,7 @@ const about = () => {
                         </p>
                     </div>
                     <div className="w-full lg:w-6/12">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Vo9KArdbQRg?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/w8CYuWiLRIM?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                          </div>
                 </div>
 {/* 
