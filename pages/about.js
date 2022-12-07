@@ -8,7 +8,7 @@ const about = () => {
     <div>
             <Head>
                 <title>About us - NazraSoft</title>
-                <meta name="description" content="Software Solution" />
+                <meta name="description" content="About Software Solution " />
                 <link rel="icon" href="/logo.jpg" />
 
             </Head>
