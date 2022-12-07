@@ -97,7 +97,7 @@ const Navbar = () => {
       
      {renderThemeChanger()} 
      </div>
-     <div className="flex items-center space-x-8">
+     <div className="flex items-center space-x-8 ml-2">
        <a href="/" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">Home</a>
        <a href="/team" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">Our Team</a>
        <a href="/pricing" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">Plans</a>
