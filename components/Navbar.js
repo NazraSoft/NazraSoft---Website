@@ -66,7 +66,7 @@ const Navbar = () => {
           <DrawerHeader className='mx-4 my-4 text-center'><a href="/pricing" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Pricing</Text></a></DrawerHeader>
           <DrawerHeader className='mx-4 my-4 text-center'><a href="/contact" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Contact</Text></a></DrawerHeader>
           <DrawerHeader className='mx-4 my-4 text-center'><a href="/team" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Our Team</Text></a></DrawerHeader>
-          <DrawerHeader className='mx-4 my-4 text-center'><a href="/carrer" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Carrer</Text></a></DrawerHeader>
+          <DrawerHeader className='mx-4 my-4 text-center'><a href="/career" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Carrer</Text></a></DrawerHeader>
         
 
             <DrawerHeader className='mx-4 my-4 text-center'>

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
-const carrer = () => {
+const career = () => {
   return (
     <div>
         <Head>
@@ -13,10 +13,17 @@ const carrer = () => {
 
   </Head>
   <Navbar/>
-  
+  {/* Career page started */} 
+        
+  {/* career page ended */}
   <Footer/>
     </div>
   )
 }
 
-export default carrer
+export default career
+
+    
+
+
+
