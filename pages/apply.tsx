@@ -2,12 +2,13 @@ import React,{useState} from 'react'
 import { useRouter } from 'next/router'
 import supabase from "../client"
 
+
 const apply = () => {
     const router = useRouter()
     const [role,setRole] = useState('')
     const [email,setEmail] = useState('')
     const [num,setNum] = useState('')
-    const handleUpload = async (e: ChangeEvent<HTMLInputElement>) => {
+    const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
         let file;
 
     if (e.target.files) {
@@ -21,12 +22,16 @@ const apply = () => {
     }
 
     const handlesubmit = async() => {
-        if (role && email &&num) {
-            
+        if (role && email && num) {
             await supabase
             .from('resume')
             .insert({  role: role,email: email, number: num })
-            .then(() => alert("Form Submitted"))
+            .then(() => { alert("Form Submitted")
+            router.push({
+                pathname: '/',
+              })
+            })
+            
             
         }
     }
