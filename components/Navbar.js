@@ -86,7 +86,7 @@ const Navbar = () => {
     
     <Flex>
       
-        <main className="w-full antialiased bg-white dark:bg-[#25292A] z-0 overflow-hidden">
+        <main className="w-full  bg-white dark:bg-[#25292A] z-0 overflow-hidden">
    <div className="text-gray-100 lg:block -left-40 -top-40 dark:text-gray-600" style={{"zIndex": -40}}>
    </div>
    <nav className="flex items-center justify-between px-4 py-10 lg:px-20">
@@ -110,7 +110,7 @@ const Navbar = () => {
        <div onClick={() => signIn()} className="relative hidden lg:block px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">
          <p className="relative  font-light text-gray-700 ">Login</p>
        </div>}
-       <GiHamburgerMenu className='relative font-light lg:hidden w-10 h-10' ref={btnRef} onClick={onOpen}/>
+       <GiHamburgerMenu className='relative font-light md:hidden w-10 h-10' ref={btnRef} onClick={onOpen}/>
         
        {status === "authenticated" && <div className='flex flex-1 flex-row space-x-2 justify-between'>
        <Link href="/account"><img  src={session.user.image} className="hidden lg:block relative cursor-pointer w-12 h-12 rounded-full " /></Link>
