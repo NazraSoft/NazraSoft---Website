@@ -16,6 +16,16 @@ const CareerPage = () => {
         
         setJobs(data);
     }
+
+    useEffect(() => {
+        const { data, error } = await supabase
+            .from('jobs')
+            .select()
+            .eq('location', 'India')
+            console.table(job)
+        
+        setJobs(data);
+    },[])
     return (
         <div>
             <div className='bg-black '>
