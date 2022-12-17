@@ -18,13 +18,7 @@ const CareerPage = () => {
     }
 
     useEffect(() => {
-        const { data, error } = await supabase
-            .from('jobs')
-            .select()
-            .eq('location', 'India')
-            console.table(job)
-        
-        setJobs(data);
+        handlePress();
     },[])
     return (
         <div>
