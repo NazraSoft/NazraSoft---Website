@@ -1,9 +1,10 @@
 import React,{useState} from 'react'
 import { useRouter } from 'next/router'
 import supabase from "../client"
-
+import { useToast } from '@chakra-ui/react'
 
 const apply = () => {
+    const toast = useToast()
     const router = useRouter()
     const [role,setRole] = useState('')
     const [email,setEmail] = useState('')
@@ -26,11 +27,7 @@ const apply = () => {
             await supabase
             .from('resume')
             .insert({  role: role,email: email, number: num })
-            .then(() => { alert("Form Submitted")
-            router.push({
-                pathname: '/',
-              })
-            })
+            .then(() => { alert("Form Submitted")            })
             
             
         }
