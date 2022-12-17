@@ -15,6 +15,7 @@
     "@nhost/react": "^0.14.1",
     "@supabase/supabase-js": "^2.1.0",
     "axios": "^1.2.0",
+    "decode-uri-component": "^0.2.1",
     "flowbite": "^1.5.5",
     "framer-motion": "^6.5.1",
     "graphql": "^16.6.0",

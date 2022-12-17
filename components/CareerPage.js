@@ -11,7 +11,7 @@ const CareerPage = () => {
         const { data, error } = await supabase
             .from('jobs')
             .select()
-            .eq('location', state)
+            .eq('location', 'India')
             console.table(job)
         
         setJobs(data);
