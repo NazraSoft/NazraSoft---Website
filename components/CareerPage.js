@@ -79,13 +79,13 @@ const CareerPage = () => {
                                  <div className='lg:w-2/3 lg:ml-56 border-2 lg:border-gray-200 '>
                                     <div className='text-2xl text-blue-900  mx-4 mt-2 hover:text-blue-500 cursor-pointer hover:underline ' onClick={(e) => {
                                         e.preventDefault()
-                                        if (confirm("Are you Sure ?")) {
+                                        // if (confirm("Are you Sure ?")) {
                                             
                                             router.push({
                                                 pathname: '/apply',
                                                 query: { name: items.title },
                                               })
-                                        }
+                                        // }
                                         
                                     }}>{items.title}</div>
                                     <div className='text-sm mx-4 mt-1'>Location : <span>{items.location}</span></div>
