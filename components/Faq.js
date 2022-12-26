@@ -41,7 +41,7 @@ const Faq = () => {
           </div>
           <div className="p-4 text-gray-800 bg-gray-100 rounded-md dark:text-gray-50 dark:bg-gray-700">
             <h2 className="font-semibold text-md">What technologies do we use in software development?</h2>
-            <p className="mt-4 text-sm font-light leading-6">Our team includes only high-experienced professionals who have experience in different software development fields:
+            <div className="mt-4 text-sm font-light leading-6">Our team includes only high-experienced professionals who have experience in different software development fields:
               For web and mobile application development:
               <div className='md:flex flex-row'>
 
@@ -69,7 +69,7 @@ const Faq = () => {
               <li className='mx-2'>React Native</li>
               </div>
               Thus, if you’d like to implement some recent technologies into your project and make it look updated, outsourcing to our specialists experienced in that niche will be the best option.
-            </p>
+            </div>
           </div>
 
           <div className="p-4 text-gray-800 bg-gray-100 rounded-md dark:text-gray-50 dark:bg-gray-700">

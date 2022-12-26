@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 import { SessionProvider } from "next-auth/react"
 import { UserProvider } from '@auth0/nextjs-auth0';
 import { GetButton } from '../components/GetButton'
-
+import { RecoilRoot } from "recoil";
 
 // import { NhostNextProvider, NhostClient } from '@nhost/nextjs';
 
@@ -18,7 +18,7 @@ import { GetButton } from '../components/GetButton'
 
 function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
 
-  return   <SessionProvider>
+  return    <RecoilRoot><SessionProvider>
     <UserProvider>
       <ThemeProvider enableSystem={true} attribute="class">
       
@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps: { ...pageProps } }: AppProps) {
     </UserProvider>
       
   </SessionProvider>
+  </RecoilRoot>
 }
 
 export default MyApp

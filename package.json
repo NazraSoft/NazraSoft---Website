@@ -27,7 +27,8 @@
     "react": "18.1.0",
     "react-burger-menu": "^3.0.8",
     "react-dom": "*",
-    "react-icons": "*"
+    "react-icons": "*",
+    "recoil": "^0.7.6"
   },
   "devDependencies": {
     "@types/node": "17.0.35",

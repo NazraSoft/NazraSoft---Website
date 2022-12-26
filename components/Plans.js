@@ -1,6 +1,37 @@
 import React from 'react'
+import { useRecoilState } from "recoil";
+import { nameState } from "../atom/name";
+import { priceState } from "../atom/price";
+import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from 'next/router'
+import supabase from "../client"
 
 const Plans = () => {
+  const { data: session ,status} = useSession()
+  const router = useRouter();
+
+  const [name, setName] = useRecoilState(nameState);
+  const [price, setPrice] = useRecoilState(priceState);
+
+  const handlebuy = async(title,cost) => {
+   if (status == 'unauthenticated') {
+      router.push('/signIn')
+   }
+   else {
+    setName(title);
+    setPrice(cost);
+    const { data, error } = await supabase
+  .from('cart')
+  .update({email:session.user.email, title:name, price:price})
+  .eq({email:session.user.email})    // Correct
+    router.push('/checkout')
+   }
+   
+
+  }
+  
+  console.log(name,price);
+
   return (
     <div>
         <div className="dark:bg-gray-800">
@@ -53,17 +84,17 @@ const Plans = () => {
           </div>
         </div>
 
-        <button className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
+        <button onClick={() => handlebuy("Website Developemt",12999)}  className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
       </div>
       <div className="absolute inset-0 transform rounded-md -rotate-3 opacity-20 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></div>
     </div>
     <div className="relative z-10 w-17/20 mx-8">
     <div className="flex justify-center mt-8">
-        <div className="absolute px-2 py-2 font-semibold bg-blue-300 rounded-md -top-4 dark:text-gray-100" style={{"z-index": 20}}>
+        <div className="absolute px-2 py-2 font-semibold bg-blue-300 rounded-md -top-4 dark:text-gray-100" style={{"zIndex": 20}}>
           <p>MOST POPULAR</p>
         </div>
       </div>
-      <div className="relative z-10 flex flex-col p-4 mx-auto bg-white border-2 rounded-lg shadow-md card dark:bg-gray-700 border-tmk-blue dark:border-gray-700" style={{"z-index": 20}}>
+      <div className="relative z-10 flex flex-col p-4 mx-auto bg-white border-2 rounded-lg shadow-md card dark:bg-gray-700 border-tmk-blue dark:border-gray-700" style={{"zIndex": 20}}>
         <h2 className="my-6 text-xl font-bold text-center text-gray-800 dark:text-white">Website + Application</h2>
         <p className="flex items-center justify-center my-4 mt-4 font-extrabold text-gray-800 price text-4xl md:text-8xl dark:text-white"><span className="text-2xl md:text-4xl">₹</span>22999</p>
         <div className="mx-auto features">
@@ -118,7 +149,7 @@ const Plans = () => {
           </div>
         </div>
 
-        <button className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
+        <button onClick={() => handlebuy("Website + Application Developemt",22999)} className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
       </div>
      
     </div>
@@ -166,7 +197,7 @@ const Plans = () => {
           </div>
         </div>
 
-        <button className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
+        <button onClick={() => handlebuy("Application Developemt",15999)} className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
       </div>
       <div className="absolute inset-0 transform rounded-md -rotate-3 opacity-20 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></div>
     </div>

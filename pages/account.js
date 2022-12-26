@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from 'next/router'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { useRouter } from 'next/router'
 
 const account = () => {
   const [state ,setState] = useState([])

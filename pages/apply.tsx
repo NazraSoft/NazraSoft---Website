@@ -9,17 +9,37 @@ const apply = () => {
     const [role,setRole] = useState('')
     const [email,setEmail] = useState('')
     const [num,setNum] = useState('')
+
+
     const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
         let file;
 
     if (e.target.files) {
       file = e.target.files[0];
     }
-
     const { data, error } = await supabase.storage
       .from("resume")
-      .upload("public/" + file?.name, file as File);
+      .upload("public/" + file?.name, file as File)
+      
+    // if (error) {
+    //     // return toast({
+    //     //     title: "Error",
+    //     //     description: "Something went wrong.",
+    //     //     status: "error",
+    //     //     duration: 9000,
+    //     //     isClosable: true,
+    //     //   })
+    //     return alert("Error")
+    // }
 
+    // // return toast({
+    // //     title: "Resume Uploaded",
+    // //     description: "Uploading successfull!",
+    // //     status: "success",
+    // //     duration: 9000,
+    // //     isClosable: true,
+    // //   })
+    // return alert("Resume Uploaded")
     }
 
     const handlesubmit = async() => {
