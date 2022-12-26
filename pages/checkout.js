@@ -15,7 +15,7 @@ const checkout = () => {
     
     setJobs(data);
 }
-console.table(data);
+console.table(job);
 useEffect(() => {
   if(status==='unauthenticated') router.push("/signIn")
   else  handlePress();
