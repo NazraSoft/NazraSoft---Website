@@ -11,7 +11,7 @@ const checkout = () => {
     const { data, error } = await supabase
         .from('cart')
         .select()
-        .eq({'email' : `${session.user.email}`})
+        .eq({'email' : session.user.email})
     
     setJobs(data);
 }
