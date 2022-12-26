@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import supabase from "../client"
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/router'
