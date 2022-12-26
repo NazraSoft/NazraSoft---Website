@@ -22,8 +22,7 @@ const Plans = () => {
     setPrice(cost);
     const { data, error } = await supabase
   .from('cart')
-  .update({email:session.user.email, title:name, price:price})
-  .eq({email:session.user.email})    // Correct
+  .insert({email:session.user.email, title:name, price:price})
     router.push('/checkout')
    }
    

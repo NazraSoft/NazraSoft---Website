@@ -10,8 +10,8 @@ const checkout = () => {
   const handlePress = async () => {
     const { data, error } = await supabase
         .from('cart')
-        .select()
-        .eq({email : session.user.email})
+        .select(title,price)
+        .eq({'email' : `${session.user.email}`})
     
     setJobs(data);
 }
