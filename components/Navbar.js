@@ -63,10 +63,9 @@ const Navbar = () => {
           <DrawerHeader className='mx-4 my-4 text-center'><a href="/" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Home</Text></a></DrawerHeader>
           <DrawerHeader className='mx-4 my-4 text-center'><a href="/about" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>About us</Text></a></DrawerHeader>
           <DrawerHeader className='mx-4 my-4 text-center'><a href="/services" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Services</Text></a></DrawerHeader>
-          <DrawerHeader className='mx-4 my-4 text-center'><a href="/pricing" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Pricing</Text></a></DrawerHeader>
           <DrawerHeader className='mx-4 my-4 text-center'><a href="/contact" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Contact</Text></a></DrawerHeader>
           <DrawerHeader className='mx-4 my-4 text-center'><a href="/team" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Our Team</Text></a></DrawerHeader>
-          <DrawerHeader className='mx-4 my-4 text-center'><a href="/career" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Carrer</Text></a></DrawerHeader>
+          <DrawerHeader className='mx-4 my-4 text-center'><a href="/career" className="font-semibold text-gray-500 transition duration-100 md:hidden hover:underline dark:text-gray-200"><Text>Career</Text></a></DrawerHeader>
         
 
             <DrawerHeader className='mx-4 my-4 text-center'>
@@ -99,8 +98,8 @@ const Navbar = () => {
      </div>
      <div className="flex items-center space-x-8 ml-2">
        <a href="/" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">Home</a>
-       <a href="/team" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">Our Team</a>
-       <a href="/pricing" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">Plans</a>
+       <a href="/career" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">Career</a>
+       <a href="/services" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">Services</a>
        <a href="/about" className="hidden font-semibold text-gray-500 transition duration-100 lg:block hover:underline dark:text-gray-200">About us</a>
        <div className=" justify-between hidden font-semibold text-gray-500 transition duration-100 lg:block hover:text-green-500 dark:text-gray-200">
          {/* Search BAR */}

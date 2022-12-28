@@ -55,7 +55,7 @@ const Hero = () => {
       </div>
     <div className="buttons-container items-center justify-center  flex space-x-2 md:space-x-4 text-white dark:text-white my-12">
       <a href='/about' className="font-semibold rounded-md text-sm md:text-base bg-blue-500 px-8 py-3 mr-1 md:px-8 md:py-4 cursor-pointer transform transition duration-200 hover:shadow-xl hover:-translate-y-1"> <span className="hidden lg:inline-block">Get</span> Quote </a>
-      <a href='/pricing' className="font-semibold rounded-md text-sm md:text-base bg-red-500 px-8 py-3 ml-1  md:px-8 md:py-4 cursor-pointer transform transition duration-200 hover:shadow-xl hover:-translate-y-1"> <span className="hidden lg:inline-block">View</span> Pricing </a>
+      <a href='/services' className="font-semibold rounded-md text-sm md:text-base bg-red-500 px-8 py-3 ml-1  md:px-8 md:py-4 cursor-pointer transform transition duration-200 hover:shadow-xl hover:-translate-y-1"> <span className="hidden lg:inline-block">View</span> Services </a>
     </div>
   </div>
   <div className="image-container md:w-1/2 md:mt-10 md:-mr-20">

@@ -1,35 +1,28 @@
 import React from 'react'
-import { useRecoilState } from "recoil";
-import { nameState } from "../atom/name";
-import { priceState } from "../atom/price";
-import { useSession, signIn, signOut } from "next-auth/react"
-import { useRouter } from 'next/router'
-import supabase from "../client"
+import Link from 'next/link'
+// import { useRecoilState } from "recoil";
+// import { nameState } from "../atom/name";
+// import { priceState } from "../atom/price";
+
 
 const Plans = () => {
-  const { data: session ,status} = useSession()
-  const router = useRouter();
+ 
+  // const [name, setName] = useRecoilState(nameState);
+  // const [price, setPrice] = useRecoilState(priceState);
 
-  const [name, setName] = useRecoilState(nameState);
-  const [price, setPrice] = useRecoilState(priceState);
-
-  const handlebuy = async(title,cost) => {
-   if (status == 'unauthenticated') {
-      router.push('/signIn')
-   }
-   else {
-    setName(title);
-    setPrice(cost);
-    const { data, error } = await supabase
-  .from('cart')
-  .insert({email:session.user.email, title:name, price:price})
-    router.push('/checkout')
-   }
-   
-
-  }
+  // const handlebuy = async(title,cost) => {
+  //  if (status == 'unauthenticated') {
+  //     router.push('/signIn')
+  //  }
+  //  else {
+  //   setName(title);
+  //   setPrice(cost);
+  //   const { data, error } = await supabase
+  // .from('cart')
+  // .insert({email:session.user.email, title:name, price:price})
+  //   router.push('/checkout')
+  //  }
   
-  console.log(name,price);
 
   return (
     <div>
@@ -83,7 +76,7 @@ const Plans = () => {
           </div>
         </div>
 
-        <button onClick={() => handlebuy("Website Developemt",12999)}  className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
+        <Link href="/services"><button className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button></Link>
       </div>
       <div className="absolute inset-0 transform rounded-md -rotate-3 opacity-20 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></div>
     </div>
@@ -148,7 +141,7 @@ const Plans = () => {
           </div>
         </div>
 
-        <button onClick={() => handlebuy("Website + Application Developemt",22999)} className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
+        <Link href="/services"><button className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button></Link>
       </div>
      
     </div>
@@ -196,8 +189,8 @@ const Plans = () => {
           </div>
         </div>
 
-        <button onClick={() => handlebuy("Application Developemt",15999)} className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button>
-      </div>
+        <Link href="/services"><button className="w-full py-4 mt-4 font-semibold text-white bg-indigo-500 rounded-md">Buy Now</button></Link>
+       </div>
       <div className="absolute inset-0 transform rounded-md -rotate-3 opacity-20 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"></div>
     </div>
   </div>
