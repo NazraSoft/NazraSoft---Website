@@ -74,7 +74,7 @@ const contact = () => {
                         </div>
                         <p className="text-lg text-white pt-10 tracking-wide">
                             Ranasinghpur,Ainginia,Bhubaneswar <br />
-                            Odisha, India
+                            Odisha,751019 India
                         </p>
                         <a href="/carrer">
                             <p className="text-white pt-16 font-bold tracking-wide underline">View Job Openings</p>
