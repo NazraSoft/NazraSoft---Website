@@ -10,15 +10,17 @@ const contact = () => {
   const [email,setEmail] = useState("");
   const [phone,setPhone] = useState("");
   const [message,setMessage] = useState("");
+  
   const insertData = async() => {
     
-    const {error} = await supabase
-    .from('query')
-    .insert({  name: name,email: email, phone: phone, message: message })
-    .then(() => alert("Form Submitted"))
-    
- 
-      
+    if(name && email && phone && message) {
+
+        await supabase
+          .from('query')
+          .insert({ name: name, email: email, phone: phone, message: message })
+          .then(() => alert("Form Submitted"))
+      } else alert("Please Fill the details")
+    }
   }
   return (
     <div><Head>
