@@ -11,28 +11,13 @@ const contact = () => {
   const [phone,setPhone] = useState("");
   const [message,setMessage] = useState("");
   const insertData = async() => {
-  //   const { error1 } = await supabase
-  // .from('query')
-  // .select()
-  // .eq('email', state.email)
-  // console.log(error1);
-  // if(error1 != undefined){
-    //console.log(state);
     
     const {error} = await supabase
     .from('query')
     .insert({  name: name,email: email, phone: phone, message: message })
     .then(() => alert("Form Submitted"))
     
-    
-  // } else {
-  //   const {error} = await supabase
-  // .from('query')
-  // .update({ name: state.name,email: state.email, phone: state.phone, message: state.message  })
-  // .eq('email', state.email)
-
-  
-  // }
+ 
       
   }
   return (
