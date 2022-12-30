@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from "next/link"
 import {FaMoon,FaSun} from "react-icons/fa"
+import {HiSun} from "react-icons/hi"
 import {GiHamburgerMenu} from "react-icons/gi"
 import {useTheme} from "next-themes";
 import { useSession, signIn, signOut } from "next-auth/react"
@@ -34,16 +35,15 @@ const Navbar = () => {
       if(currentTheme === "dark"){
         return (
           <div>
-
-            <FaSun className="w-10 h-6 text-yellow-600 border-l-2 border-red-600 " role="button" onClick={() => setTheme('light')} />
+            <HiSun className="w-10 h-6 ml-2 border-l-2 " role="button" onClick={() => setTheme('light')} />
           </div>
         )
       }
       else {
         return (
           <div>
-            <FaMoon className="w-10 h-6 text-gray-900 border-l-2 border-red-600 " role="button" onClick={() => setTheme('dark')} />
-            </div>
+            <FaMoon className="w-10 h-6 ml-2 border-l-2" role="button" onClick={() => setTheme('dark')} />
+          </div>
         )
       }
    };
@@ -109,8 +109,11 @@ const Navbar = () => {
        <div onClick={() => signIn()} className="relative hidden lg:block px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">
          <p className="relative  font-light text-gray-700 ">Login</p>
        </div>}
-       <GiHamburgerMenu className='relative font-light md:hidden w-10 h-10' ref={btnRef} onClick={onOpen}/>
+       <div ref={btnRef} onClick={onOpen} className='relative font-light md:hidden right-0' >
+
+       <GiHamburgerMenu className='relative w-10 h-10' />
         
+       </div>
        {status === "authenticated" && <div className='flex flex-1 flex-row space-x-2 justify-between'>
        <Link href="/account"><img  src={session.user.image} className="hidden lg:block relative cursor-pointer w-12 h-12 rounded-full " /></Link>
        <button className="hidden lg:block relative px-8 py-2 bg-white border border-gray-800 cursor-pointer rounded-3xl dark:border-gray-50 hover:bg-gray-300 transition duration-100 transform hover:text-green-500 hover:-translate-y-2 hover:-translate-x-1">
